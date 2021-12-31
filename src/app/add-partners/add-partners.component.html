@@ -1,0 +1,103 @@
+<section class="mb-4 mr-2">
+    <div class="row">
+        <div class="col-lg-6 admins_head">
+            <h6>Partner</h6> 
+        </div>
+        <div class="col-lg-6 d-flex justify-content-end">
+          <span class="admin_lable">Partners /</span> <span class="add">Add Partners</span>
+        </div>
+    </div>
+  </section>
+
+
+
+
+
+<Section style="margin-left: 20px;">
+    <mat-card>
+      <form [formGroup]="addPartnersGroup" (ngSubmit)="addPartnersSubmit()">
+        <div class="row">
+          <div class="col-md-6 col-lg-6 col-sm-6">
+              <mat-form-field class="example-full-width"  appearance="fill">
+                  <mat-label>PARTNERS NAME</mat-label>
+                  <input matInput formControlName="partnersName"  placeholder="Enter Partners Name">
+                </mat-form-field>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-6">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>PARTNERS EMAIL ID</mat-label>
+                <input matInput formControlName="partnersEmail"   placeholder="Enter Partners Email Id">
+              </mat-form-field>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-6">
+        <mat-form-field class="example-full-width"  appearance="fill">
+            <mat-label>CATEGORY</mat-label>
+            <mat-select  formControlName="partnersCategory" placeholder="Selete Category">
+              <mat-option value="vendor">
+                Vendor Category
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-6">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>SUB CATEGORY</mat-label>
+                <mat-select formControlName="partnersSubCategory" placeholder="Selete Sub Category">
+                  <mat-option value="vendor">
+                    Vendor Category
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-6">
+              <mat-form-field class="example-full-width"  appearance="fill">
+                  <mat-label>CONTACT NUMBER</mat-label>
+                  <input matInput formControlName="contactNumber"  placeholder="Enter Contact Number">
+                </mat-form-field>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-6">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>COUNTRY</mat-label>
+                <input matInput formControlName="country"  placeholder="Enter Country">
+              </mat-form-field>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-6">
+          <mat-form-field class="example-full-width"   appearance="fill">
+              <mat-label>STATE</mat-label>
+              <input matInput formControlName="state"  placeholder="Enter State">
+            </mat-form-field>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-6">
+        <mat-form-field class="example-full-width"   appearance="fill">
+            <mat-label>CITY</mat-label>
+            <input matInput formControlName="city"  placeholder="Enter City">
+          </mat-form-field>
+        </div>
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <h3>Upload Logo</h3>
+        </div>
+        <div class="col-md-11 col-lg-11 col-sm-11 d-flex justify-content-center p-5" style="border: dotted 2px gray; margin-left: 2pc;">
+          <div class="row" (click)="fileInput.click()">
+            <input #fileInput type="file" hidden (change)="handleChange($event.target.files)" formControlName="productimage"   />
+              <div class="col-md-12 col-lg-12 col-sm-12" style="text-align: center;">
+               <img src="../../../../assets/cloud-computing%20(1).svg" width="10%" alt="">
+              </div>
+              <div class="col-md-12 col-lg-12 col-sm-12" style="text-align: center;">
+               <h3 style="color: gray;">Click to Upload</h3>
+              </div>
+          </div>
+          </div>
+        
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+              <Button class="login-button" type="submit">Save</Button>
+          </div>
+          <div class="col-md-3">
+              <Button class="Cancel-button">Cancel</Button>
+          </div>
+       </div>
+    </form>
+</mat-card>
+</Section>
+       

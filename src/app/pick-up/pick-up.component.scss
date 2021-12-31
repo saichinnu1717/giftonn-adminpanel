@@ -1,0 +1,76 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  
+  
+  .login-button {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    background: #988149;;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 48px;
+  }
+  .Cancel-button {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    background: grey;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 48px;
+  }
+  .onboarding-button{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    background: rgb(236, 94, 94);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 48px;
+  }
+  
+  
+  
+  
+  .admins_head h6{font-weight: 700;
+  text-transform: capitalize;
+  font-size: 15px;
+  margin-left: 30px;
+  }
+  .vendor-text{
+      color: #000000;
+  }
+  
+  
+  .add {
+  color: #988149
+  }
+  
+  .admin_lable {
+  color: gray;
+  }
+  .request_btn a{margin-left: 35px;font-size: 15px;color: #fff;background-color: #988149;padding: 9px 28px;border-radius: 3px; text-decoration: none;}
+  .cancel_btn a{margin-left: 35px;font-size: 15px;color: #fff;background-color: #EEA7A7;;padding: 9px 28px;border-radius: 3px;border-radius: 3px; text-decoration: none;}
+  .resend_btn a{margin-left: 35px;font-size: 15px;color: #988149;padding: 9px 28px; border-radius: 3px;border: 1px solid #988149; text-decoration: none;}
+  .submit_btn a{margin-left: 35px;font-size: 15px;color: #fff;background-color: #988149;padding: 9px 25px;border-radius: 3px; text-decoration: none;}
+  .back{
+    color: #988149;
+  }

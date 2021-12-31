@@ -1,0 +1,373 @@
+<section>
+    <div class="row">
+        <div class="col-lg-6 admins_head">
+            <h6>Purchaser Orders</h6> 
+        </div>
+        <div class="col-lg-6 add_btn">
+        </div>
+    </div>
+</section>
+<section class="table_box" style="margin-left: 20px;">
+    <div class="row">
+        <div class="col-lg-6 export_btn"><h6>Export:</h6><a>csv</a><a>xls</a><a>pdf</a> </div>
+        <div class="col-lg-5 col-md-5 col-sm-5 d-flex justify-content-end" style="margin-right:25px">
+            <form class="search-form">
+                <mat-form-field class="form_field search_btn"  appearance="outline">
+                    <mat-icon class="form_field" matSuffix>search</mat-icon>
+                    <input matInput type="search" placeholder="search" class="search-input">
+                </mat-form-field>
+            </form>     
+        </div>
+    </div>
+    <mat-tab-group>
+        <mat-tab  class="text-right tab_view" label="Orders" style="padding-left: 221px;">
+            <section class="">
+                <table class="table table-striped table-hover tab_admin prod_tab">
+                    <thead>  
+                        <tr style="padding-top: 20px;">
+                            <th class="th_wid">Order ID</th>
+                            <th class="th_wid">Customer ID</th>  
+                            <th class="th_wid">Store ID</th>    
+                            <th class="th_wid">Purchaser Name</th>  
+                            <th class="th_wid">Product Id</th> 
+                            <th class="th_wid">Product Name</th>  
+                            <th class="th_wid">Net Price</th> 
+                            <th class="th_wid">Total Price</th>  
+                            <th class="th_wid">Status</th>
+                            <th class="th_wid">Track</th>    
+                        </tr>  
+                    </thead>  
+                    <tbody>  
+                        <tr>   
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>Rakesh</td>  
+                            <td>JOY56897</td> 
+                            <td>Bracelet</td> 
+                            <td>15000</td>  
+                            <td>16000</td>  
+                            <td>pending</td>  
+                            <td class="selec_option">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Option </option>
+                                    <option value="1">Confirmed</option>
+                                    <option value="2">Ready for price-up</option>
+                                    <option value="3">Order Picked-up</option>
+                                    <option value="4">Auto Cancelled</option>
+                                    <option value="5">Cancelled</option>
+                                    <option value="6">Refunded</option>
+                                </select>
+                            </td>
+                        </tr>  
+                        <tr>   
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>Rakesh</td>  
+                            <td>JOY56897</td> 
+                            <td>Bracelet</td> 
+                            <td>15000</td>  
+                            <td>16000</td>  
+                            <td>pending</td>  
+                            <td class="selec_option">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Option </option>
+                                    <option value="1">Confirmed</option>
+                                    <option value="2">Ready for price-up</option>
+                                    <option value="3">Order Picked-up</option>
+                                    <option value="4">Auto Cancelled</option>
+                                    <option value="5">Cancelled</option>
+                                    <option value="6">Refunded</option>
+                                </select>
+                            </td>
+                        </tr>  
+                        <tr>   
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>Rakesh</td>  
+                            <td>JOY56897</td> 
+                            <td>Bracelet</td> 
+                            <td>15000</td>  
+                            <td>16000</td>  
+                            <td>pending</td>  
+                            <td class="selec_option">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Option </option>
+                                    <option value="1">Confirmed</option>
+                                    <option value="2">Ready for price-up</option>
+                                    <option value="3">Order Picked-up</option>
+                                    <option value="4">Auto Cancelled</option>
+                                    <option value="5">Cancelled</option>
+                                    <option value="6">Refunded</option>
+                                </select>
+                            </td>
+                        </tr>  
+                        <tr>   
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>Rakesh</td>  
+                            <td>JOY56897</td> 
+                            <td>Bracelet</td> 
+                            <td>15000</td>  
+                            <td>16000</td>  
+                            <td>pending</td>  
+                            <td class="selec_option">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Option </option>
+                                    <option value="1">Confirmed</option>
+                                    <option value="2">Ready for price-up</option>
+                                    <option value="3">Order Picked-up</option>
+                                    <option value="4">Auto Cancelled</option>
+                                    <option value="5">Cancelled</option>
+                                    <option value="6">Refunded</option>
+                                </select>
+                            </td>
+                        </tr>  
+                    </tbody>  
+                </table>
+            </section> 
+        </mat-tab>
+        <mat-tab label="Generate OTP">
+            <section class="Order_form">
+                <form>
+                    <div class="form-group order_text">
+                      <label for="exampleInputEmail1">Order Id</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1"placeholder="Enter Order Id" aria-describedby="emailHelp">
+                    </div>
+                </form>
+                <div class="row purches_btn">
+                    <div class="request_btn">
+                        <a class="" href="">Request OTP</a>
+                    </div>
+                    <div class="cancel_btn">
+                      <a class="" href="">Cancel</a>
+                    </div>
+                    <div class="resend_btn">
+                      <a class="" href="">Resend OTP</a>
+                    </div>
+                </div>
+            </section>
+            <section class="Order_form">
+                <form>
+                    <div class="form-group order_text">
+                      <label for="exampleInputEmail1">CONFIRM OTP</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1"placeholder="Enter OTP" aria-describedby="emailHelp">
+                    </div>
+                </form>
+                <div class="row purches_btn">
+                    <div class="submit_btn">
+                        <a class="" href="">Submit</a>
+                    </div>
+                </div>
+            </section>
+        </mat-tab>  
+        <mat-tab label="Generate QR">
+            <section class="">
+                <table class="table table-striped table-hover tab_admin prod_tab">
+                    <thead>  
+                        <tr style="padding-top: 20px;">
+                            <th class="th_wid">Order ID</th>
+                            <th class="th_wid">Customer ID</th>  
+                            <th class="th_wid">Store ID</th>    
+                            <th class="th_wid">Purchaser Name</th>  
+                            <th class="th_wid">Product Id</th> 
+                            <th class="th_wid">Product Name</th>  
+                            <th class="th_wid">Net Price</th> 
+                            <th class="th_wid">Total Price</th>  
+                            <th class="th_wid">Status</th>
+                            <th class="th_wid">Track</th>    
+                        </tr>  
+                    </thead>  
+                    <tbody>  
+                        <tr>   
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>Rakesh</td>  
+                            <td>JOY56897</td> 
+                            <td>Bracelet</td> 
+                            <td>15000</td>  
+                            <td>16000</td>  
+                            <td>pending</td>  
+                            <td class="selec_option">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Option </option>
+                                    <option value="1">Confirmed</option>
+                                    <option value="2">Ready for price-up</option>
+                                    <option value="3">Order Picked-up</option>
+                                    <option value="4">Auto Cancelled</option>
+                                    <option value="5">Cancelled</option>
+                                    <option value="6">Refunded</option>
+                                </select>
+                            </td>
+                        </tr>  
+                        <tr>   
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>Rakesh</td>  
+                            <td>JOY56897</td> 
+                            <td>Bracelet</td> 
+                            <td>15000</td>  
+                            <td>16000</td>  
+                            <td>pending</td>  
+                            <td class="selec_option">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Option </option>
+                                    <option value="1">Confirmed</option>
+                                    <option value="2">Ready for price-up</option>
+                                    <option value="3">Order Picked-up</option>
+                                    <option value="4">Auto Cancelled</option>
+                                    <option value="5">Cancelled</option>
+                                    <option value="6">Refunded</option>
+                                </select>
+                            </td>
+                        </tr>  
+                        <tr>   
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>Rakesh</td>  
+                            <td>JOY56897</td> 
+                            <td>Bracelet</td> 
+                            <td>15000</td>  
+                            <td>16000</td>  
+                            <td>pending</td>  
+                            <td class="selec_option">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Option </option>
+                                    <option value="1">Confirmed</option>
+                                    <option value="2">Ready for price-up</option>
+                                    <option value="3">Order Picked-up</option>
+                                    <option value="4">Auto Cancelled</option>
+                                    <option value="5">Cancelled</option>
+                                    <option value="6">Refunded</option>
+                                </select>
+                            </td>
+                        </tr>  
+                        <tr>   
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>Rakesh</td>  
+                            <td>JOY56897</td> 
+                            <td>Bracelet</td> 
+                            <td>15000</td>  
+                            <td>16000</td>  
+                            <td>pending</td>  
+                            <td class="selec_option">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Option </option>
+                                    <option value="1">Confirmed</option>
+                                    <option value="2">Ready for price-up</option>
+                                    <option value="3">Order Picked-up</option>
+                                    <option value="4">Auto Cancelled</option>
+                                    <option value="5">Cancelled</option>
+                                    <option value="6">Refunded</option>
+                                </select>
+                            </td>
+                        </tr>     
+                    </tbody>  
+                </table>
+            </section>
+        </mat-tab>  
+        <mat-tab label="Vendor Related Coupons">
+            <section class="">
+                <table class="table table-striped table-hover tab_admin prod_tab">
+                    <thead>  
+                        <tr style="padding-top: 20px;">
+                            <th class="th_wid">Order ID</th>
+                            <th class="th_wid">Customer ID</th>  
+                            <th class="th_wid">Store ID</th>    
+                            <th class="th_wid">Purchaser Name</th>  
+                            <th class="th_wid">Product Id</th> 
+                            <th class="th_wid">Product Name</th>  
+                            <th class="th_wid">Net Price</th> 
+                            <th class="th_wid">Total Price</th>  
+                            <th class="th_wid">Status</th>
+                            <th class="th_wid">Track</th>    
+                        </tr>  
+                    </thead>  
+                    <tbody>  
+                        <tr>   
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>Rakesh</td>  
+                            <td>JOY56897</td> 
+                            <td>Bracelet</td> 
+                            <td>15000</td>  
+                            <td>16000</td>  
+                            <td>pending</td>  
+                            <td class="selec_option" (change)="action($event.target.value)">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Option </option>
+                                    <option value="approve">Approved</option>
+                                    <option value="freeze">Freeze</option>
+                                </select>
+                            </td>
+                        </tr>  
+                        <tr>   
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>Rakesh</td>  
+                            <td>JOY56897</td> 
+                            <td>Bracelet</td> 
+                            <td>15000</td>  
+                            <td>16000</td>  
+                            <td>pending</td>  
+                            <td class="selec_option" (change)="action($event.target.value)">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Option </option>
+                                    <option value="approve">Approved</option>
+                                    <option value="freeze">Freeze</option>
+                                </select>
+                            </td>
+                        </tr>  
+                        <tr>   
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>Rakesh</td>  
+                            <td>JOY56897</td> 
+                            <td>Bracelet</td> 
+                            <td>15000</td>  
+                            <td>16000</td>  
+                            <td>pending</td>  
+                            <td class="selec_option" (change)="action($event.target.value)">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Option </option>
+                                    <option value="approve">Approved</option>
+                                    <option value="freeze">Freeze</option>
+                                </select>
+                            </td>
+                        </tr>  
+                        <tr>   
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>256897</td>  
+                            <td>Rakesh</td>  
+                            <td>JOY56897</td> 
+                            <td>Bracelet</td> 
+                            <td>15000</td>  
+                            <td>16000</td>  
+                            <td>pending</td>  
+                            <td class="selec_option" (change)="action($event.target.value)">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Option </option>
+                                    <option value="approve">Approved</option>
+                                    <option value="freeze">Freeze</option>
+                                </select>
+                            </td>
+                        </tr>     
+                    </tbody>  
+                </table>
+            </section>
+        </mat-tab>   
+    </mat-tab-group>
+</section>
+

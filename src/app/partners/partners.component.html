@@ -1,0 +1,148 @@
+<section >
+    <div class="row">
+        <div class="col-lg-6 admins_head">
+            <h6>Partners</h6> 
+        </div>
+        <div class="col-lg-6 product_btn">
+            <h6 (click)="addPartner()"> Add Partners</h6> 
+        </div>
+    </div>
+</section>
+<section class="table_box" style="margin-left: 20px;">
+    <div class="row">
+        <div class="col-lg-6 export_btn"><h6>Export:</h6><a>csv</a><a>xls</a><a>pdf</a> </div>
+        <div class="col-lg-5 col-md-5 col-sm-5 d-flex justify-content-end" style="margin-right:25px">
+            <form class="search-form">
+                <mat-form-field class="form_field search_btn"  appearance="outline">
+                    <mat-icon class="form_field" matSuffix>search</mat-icon>
+                    <input matInput type="search" placeholder="search" class="search-input">
+                </mat-form-field>
+            </form>     
+        </div>
+    </div>
+    <table class="table table-striped table-hover tab_admin prod_tab">
+        <thead>  
+            <tr>
+                <th style="padding-left: 20px;">logo</th>  
+                <th class="th_wid text-center">Name</th>  
+                <th class="th_wid text-center">Email Id</th>   
+                <th class="th_wid text-center">Location</th>  
+                <th class="th_wid" style="padding-left: 28px;">Action</th>  
+            </tr>  
+        </thead>  
+        <tbody>  
+            <tr>  
+                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
+                <td class="text-center">LG</td>
+                <td class="text-center">rajeshsharma@gmail.com</td>  
+                <td class="text-center">Hyderabad</td>  
+                 <td class="selec_option" (change)="action($event.target.value)">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Option </option>
+                        <option value="deny">Deny</option>
+                        <option value="freeze">Freeze</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </td>
+            </tr>  
+            <tr>  
+                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
+                <td class="text-center">MG</td>
+                <td class="text-center">rajeshsharma@gmail.com</td>  
+                <td class="text-center">Hyderabad</td>  
+                <td class="selec_option" (change)="action($event.target.value)">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Option </option>
+                        <option value="deny">Deny</option>
+                        <option value="freeze">Freeze</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </td>
+            </tr> 
+            <tr>  
+                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
+                <td class="text-center">Sumsung</td>
+                <td class="text-center">rajeshsharma@gmail.com</td>  
+                <td class="text-center">Hyderabad</td>  
+                <td class="selec_option" (change)="action($event.target.value)">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Option </option>
+                        <option value="deny">Deny</option>
+                        <option value="freeze">Freeze</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </td>
+            </tr> 
+            <tr>  
+                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
+                <td class="text-center">LG</td>
+                <td class="text-center">rajeshsharma@gmail.com</td>  
+                <td class="text-center">Hyderabad</td>  
+                <td class="selec_option" (change)="action($event.target.value)">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Option </option>
+                        <option value="deny">Deny</option>
+                        <option value="freeze">Freeze</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </td>
+            </tr>  
+            <tr>  
+                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
+                <td class="text-center">LG</td>
+                <td class="text-center">rajeshsharma@gmail.com</td>  
+                <td class="text-center">Hyderabad</td>  
+                <td class="selec_option" (change)="action($event.target.value)">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Option </option>
+                        <option value="deny">Deny</option>
+                        <option value="freeze">Freeze</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </td>
+            </tr>  
+            <tr>  
+                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
+                <td class="text-center">LG</td>
+                <td class="text-center">rajeshsharma@gmail.com</td>  
+                <td class="text-center">Hyderabad</td>  
+                <td class="selec_option" (change)="action($event.target.value)">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Option </option>
+                        <option value="deny">Deny</option>
+                        <option value="freeze">Freeze</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </td>
+            </tr>  
+            <tr>  
+                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
+                <td class="text-center">LG</td>
+                <td class="text-center">rajeshsharma@gmail.com</td>  
+                <td class="text-center">Hyderabad</td>  
+                <td class="selec_option" (change)="action($event.target.value)">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Option </option>
+                        <option value="deny">Deny</option>
+                        <option value="freeze">Freeze</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </td>
+            </tr> 
+            <tr>  
+                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
+                <td class="text-center">LG</td>
+                <td class="text-center">rajeshsharma@gmail.com</td>  
+                <td class="text-center">Hyderabad</td>  
+                <td class="selec_option" (change)="action($event.target.value)">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Option </option>
+                        <option value="deny">Deny</option>
+                        <option value="freeze">Freeze</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </td>
+            </tr>             
+        </tbody>  
+    </table>
+</section>

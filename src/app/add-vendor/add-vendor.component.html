@@ -1,0 +1,238 @@
+
+
+<section class="mb-4 mr-2">
+  <div class="row">
+      <div class="col-lg-6 admins_head">
+          <h6>Vendor</h6> 
+      </div>
+      <div class="col-lg-6 d-flex justify-content-end">
+        <span class="admin_lable">Vendor /</span> <span class="add">Add Vendor</span>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<Section style="margin-left: 20px;">
+    <mat-card>
+      <form [formGroup]="addVendorGroup">
+        <div class="row">
+          <div class="col-md-6 col-lg-6 col-sm-6">
+              <mat-form-field class="example-full-width"  appearance="fill">
+                  <mat-label>STORE NAME</mat-label>
+                  <input matInput formControlName="storename" placeholder="Enter Full Store Name">
+                </mat-form-field>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-6">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>CATEGORY</mat-label>
+                <mat-select formControlName="category" placeholder="Selete Category">
+                  <mat-option value="">
+                    Selete Category
+                  </mat-option>
+                  <mat-option value="vendor">
+                    Vendor Category
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-6">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>PHONE NUMBER</mat-label>
+                <input matInput formControlName="phone" placeholder="Enter Phone Number">
+              </mat-form-field>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-6">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>EMAIL NAME</mat-label>
+                <input matInput formControlName="email" placeholder="Enter Email Id">
+              </mat-form-field>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-6">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>GST NUMBER</mat-label>
+                <input matInput formControlName="gst" placeholder="Enter GST Number">
+              </mat-form-field>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-6">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>STORE PAN NUMBER</mat-label>
+                <input matInput formControlName="pan" placeholder="Enter Pan Number">
+              </mat-form-field>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-6">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>COUNTRY NAME</mat-label>
+                <mat-select formControlName="country" placeholder="Selete Country">
+                  <mat-option value="">
+                    Selete Country
+                   </mat-option>
+                  <mat-option value="india">
+                   India
+                  </mat-option>
+                  <mat-option value="afghanistan">
+                    Afghanistan
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+          </div>
+        <div class="col-md-6 col-lg-6 col-sm-6">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>STATE NAME</mat-label>
+                <mat-select formControlName="state" placeholder="Selete State">
+                  <mat-option value="">
+                    Selete State
+                  </mat-option>
+                  <mat-option value="arunachal pradesh">
+                    Arunachal Pradesh
+                  </mat-option>
+                  <mat-option value="assam">
+                    Assam
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-6">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>CITY NAME</mat-label>
+                <mat-select formControlName="city" placeholder="Selete City">
+                  <mat-option value="">
+                    Selete City
+                   </mat-option>
+                  <mat-option value="gondia">
+                   Gondia
+                  </mat-option>
+                  <mat-option value="nagpur">
+                    Nagpur
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-6">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>CITY NAME</mat-label>
+                <mat-select formControlName="locality" placeholder="Selete Locality">
+                  <mat-option value="">
+                    Selete Locality
+                  </mat-option>
+                  <mat-option value="Aamby Valley Road">
+                    Aamby Valley Road
+                  </mat-option>
+                  <mat-option value="Adarsh Nagar">
+                    Adarsh Nagar
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+          </div>
+          <div class="col-md-12 col-lg-12 col-sm-12">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>ADDRESS</mat-label>
+                <input matInput formControlName="address" placeholder="Enter Address">
+              </mat-form-field>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-6">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>STORE MANAGER NAME</mat-label>
+                <input matInput formControlName="managername" placeholder="Enter Manager Name">
+              </mat-form-field>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-6">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>STORE MANAGER EMAIL ID</mat-label>
+                <input matInput formControlName="manageremail" placeholder="Enter Manager Email Id">
+              </mat-form-field>
+        </div>
+        <div class="col-md-12 col-lg-12 col-sm-12">
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>STORE MANAGER PHONE NUMBER</mat-label>
+                <input matInput formControlName="managerPhone" placeholder="Enter Manager Phone">
+              </mat-form-field>
+        </div>
+        <div class="col-md-12 col-lg-12 col-sm-12">
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>About Store</mat-label>
+                <textarea matInput formControlName="aboutstore" placeholder="write here"></textarea>
+              </mat-form-field>
+        </div>
+        
+            <div class="col-md-5 col-lg-5 col-sm-5" style="margin-left: 1pc;">
+                <h3>Store Manager Image</h3>
+            </div>
+            <div class="col-md-5 col-lg-5 col-sm-5" style="margin-left: 6pc;">
+                <h3>Upload Logo</h3>
+            </div>
+       
+        <div class="col-md-5 col-lg-5 col-sm-5 d-flex justify-content-center p-5" style="border: dotted 2px gray; margin-left: 2pc;">
+           <div class="row">
+               <div class="col-md-12 col-lg-12 col-sm-12" style="text-align: center;">
+                <img src="../../../../assets/cloud-computing%20(1).svg" width="10%" alt="">
+               </div>
+               <div class="col-md-12 col-lg-12 col-sm-12" style="text-align: center;">
+                <h3 style="color: gray;">Click to Upload</h3>
+               </div>
+           </div>
+           </div>
+           <div class="col-md-1 col-lg-1 col-sm-1"></div>
+          
+           <div class="col-md-5 col-lg-5 col-sm-5 d-flex justify-content-center p-5" style="border: dotted 2px gray;">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12" style="text-align: center;">
+                 <img src="../../../../assets/cloud-computing%20(1).svg" width="10%" alt="">
+                </div>
+                <div class="col-md-12 col-lg-12 col-sm-12" style="text-align: center;">
+                 <h3 style="color: gray;">Click to Upload</h3>
+                </div>
+            </div>
+            </div>
+            
+                <div class="col-md-5 col-lg-5  col-sm-5 mt-2" style="margin-left: 1pc;">
+                    <h3>Upload Store Image</h3>
+                </div>
+                <div class="col-md-5 col-lg-5 col-sm-5 mt-2" style="margin-left: 6pc;">
+                    <h3>Store Certifications (if any)</h3>
+                </div>
+    
+            <div class="col-md-5 col-lg-5 col-sm-5 d-flex justify-content-center p-5" style="border: dotted 2px gray; margin-left: 2pc;">
+               <div class="row">
+                   <div class="col-md-12 col-lg-12 col-sm-12" style="text-align: center;">
+                    <img src="../../../../assets/cloud-computing%20(1).svg" width="10%" alt="">
+                   </div>
+                   <div class="col-md-12 col-lg-12 col-sm-12" style="text-align: center;">
+                    <h3 style="color: gray;">Click to Upload</h3>
+                   </div>
+               </div>
+               </div>
+               <div class="col-md-1 col-lg-1 col-sm-1"></div>
+              
+               <div class="col-md-5 col-lg-5 col-sm-5 d-flex justify-content-center p-5" style="border: dotted 2px gray;">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12" style="text-align: center;">
+                     <img src="../../../../assets/cloud-computing%20(1).svg" width="10%" alt="">
+                    </div>
+                    <div class="col-md-12 col-lg-12 col-sm-12" style="text-align: center;">
+                     <h3 style="color: gray;">Click to Upload</h3>
+                    </div>
+                </div>
+                </div>
+             
+        </div>
+     
+      </form>
+      <div class="row">
+        <div class="col-md-3">
+            <Button class="login-button" type="submit" (click)="addVendorSubmit()" >Save</Button>
+        </div>
+        <div class="col-md-3">
+            <Button class="Cancel-button">Cancel</Button>
+        </div>
+        <div class="col-md-3">
+            <Button class="onboarding-button" (click)="onBoarding()" >onboarding</Button>
+        </div>
+       </div>
