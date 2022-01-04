@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { Router } from "@angular/router";
 import { DeleteModelComponent } from "../delete-model/delete-model.component";
+import { FilterComponent } from "../filter/filter.component";
 @Component({
   selector: "app-users",
   templateUrl: "./users.component.html",
@@ -60,6 +61,12 @@ export class UsersComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
+    });
+  }
+  openFilter() {
+    const dialogRef = this.dialog.open(FilterComponent, {
+      width: "50%",
+      data: "user",
     });
   }
 }

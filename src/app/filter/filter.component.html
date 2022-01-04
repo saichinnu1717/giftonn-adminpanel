@@ -1,0 +1,81 @@
+<div mat-dialog-content class="rounded">
+  <div class="d-flex justify-content-between">
+    <div></div>
+    <div class="font-weight-bold">
+      <p style="font-size: 24px">Filter</p>
+    </div>
+    <div class="example-button-container">
+      <button
+        mat-mini-fab
+        color="warn"
+        (click)="close()"
+        style="background: #e04f5f"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="submit()" class="m-5 pl-5">
+    <div>
+      <div class="font-weight-bold py-4" style="font-size: 15px">
+        <span>Role</span>
+      </div>
+      <mat-radio-group formControlName="role">
+        <mat-radio-button value="senior" class="pr-5 mr-5"
+          >Senior</mat-radio-button
+        >
+        <mat-radio-button value="mideLevel" class="pr-5 mr-5"
+          >Mid level</mat-radio-button
+        >
+        <mat-radio-button value="junior" class="pr-5 mr-5"
+          >Junior</mat-radio-button
+        >
+      </mat-radio-group>
+    </div>
+    <div>
+      <div class="font-weight-bold py-4" style="font-size: 15px">
+        <span>Department</span>
+      </div>
+      <mat-radio-group formControlName="department">
+        <mat-radio-button value="it" class="pr-5 mr-5">IT</mat-radio-button>
+        <mat-radio-button value="sales" class="pr-5 mr-5"
+          >Sales</mat-radio-button
+        >
+        <mat-radio-button value="marketing" class="pr-5 mr-5"
+          >Marketing</mat-radio-button
+        >
+        <mat-radio-button value="finance" class="pr-5 mr-5"
+          >Finance</mat-radio-button
+        >
+      </mat-radio-group>
+    </div>
+    <div>
+      <div class="font-weight-bold py-4" style="font-size: 15px">
+        <span>Status</span>
+      </div>
+      <mat-radio-group formControlName="status">
+        <mat-radio-button value="active" class="pr-5 mr-5"
+          >Active</mat-radio-button
+        >
+        <mat-radio-button value="inactive" class="pr-5 mr-5"
+          >In-Active</mat-radio-button
+        >
+      </mat-radio-group>
+    </div>
+    <div class="d-flex justify-content-around pt-4">
+      <div>
+        <button
+          type="button"
+          mat-button
+          class="outline-button"
+          (click)="reset()"
+        >
+          Reset
+        </button>
+      </div>
+      <div>
+        <button type="button" mat-button class="rounded-button">Apply</button>
+      </div>
+    </div>
+  </form>
+</div>
