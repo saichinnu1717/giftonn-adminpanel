@@ -64,6 +64,7 @@ import { PaymentIntervalsComponent } from "./payment-intervals/payment-intervals
 import { AddESignatureComponent } from "./add-e-signature/add-e-signature.component";
 import { MaterialModule } from "./material/material.module";
 import { FilterComponent } from "./filter/filter.component";
+import { EditUserComponent } from './edit-user/edit-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -120,6 +121,7 @@ import { FilterComponent } from "./filter/filter.component";
     PaymentIntervalsComponent,
     AddESignatureComponent,
     FilterComponent,
+    EditUserComponent,
   ],
   imports: [
     BrowserModule,

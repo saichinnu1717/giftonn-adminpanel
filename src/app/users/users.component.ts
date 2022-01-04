@@ -19,7 +19,7 @@ export class UsersComponent implements OnInit {
       email: "sudharshan.nallamothu@oracle.com",
     },
     {
-      empid: 1,
+      empid: 2,
       lastName: "Nallamothu",
       firstName: "Sudharshan",
       role: "IT",
@@ -27,7 +27,7 @@ export class UsersComponent implements OnInit {
       email: "sudharshan.nallamothu@oracle.com",
     },
     {
-      empid: 1,
+      empid: 3,
       lastName: "Nallamothu",
       firstName: "Sudharshan",
       role: "IT",
@@ -35,7 +35,7 @@ export class UsersComponent implements OnInit {
       email: "sudharshan.nallamothu@oracle.com",
     },
     {
-      empid: 1,
+      empid: 4,
       lastName: "Nallamothu",
       firstName: "Sudharshan",
       role: "IT",
@@ -49,6 +49,9 @@ export class UsersComponent implements OnInit {
 
   addUser() {
     this.router.navigate(["add-user"]);
+  }
+  editUser(user) {
+    this.router.navigate(["edit-user", user.empid]);
   }
   download(type) {
     console.log(type);
