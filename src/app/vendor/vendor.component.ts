@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
 import { Router } from "@angular/router";
+import { FilterComponent } from "../filter/filter.component";
 @Component({
   selector: "app-vendor",
   templateUrl: "./vendor.component.html",
@@ -41,11 +43,17 @@ export class VendorComponent implements OnInit {
     { value: "approve", viewValue: "Approve" },
     { value: "rating", viewValue: "Rating" },
   ];
-  constructor(private router: Router) {}
+  constructor(private router: Router, public dialog: MatDialog) {}
 
   ngOnInit(): void {}
   addVendor() {
     this.router.navigate(["add-vendor"]);
+  }
+  openFilter() {
+    const dialogRef = this.dialog.open(FilterComponent, {
+      width: "50%",
+      data: { filterType: "vendor" },
+    });
   }
   denyVendor(vendor) {
     console.log("denyVendor : " + vendor.storeId);

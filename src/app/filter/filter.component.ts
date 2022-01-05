@@ -1,11 +1,6 @@
-import { Component, OnInit } from "@angular/core";
-import {
-  FormGroup,
-  FormControl,
-  Validators,
-  FormBuilder,
-} from "@angular/forms";
-import { MatDialogRef } from "@angular/material/dialog";
+import { Component, Inject, OnInit } from "@angular/core";
+import { FormGroup, Validators, FormBuilder } from "@angular/forms";
+import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
 
 @Component({
   selector: "app-filter",
@@ -13,36 +8,50 @@ import { MatDialogRef } from "@angular/material/dialog";
   styleUrls: ["./filter.component.scss"],
 })
 export class FilterComponent implements OnInit {
-  form: FormGroup;
+  userForm: FormGroup;
+  vendorForm: FormGroup;
   constructor(
     public dialogRef: MatDialogRef<FilterComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private fb: FormBuilder
   ) {
-    this.form = this.fb.group({
+    console.log(data.filterType);
+    this.userForm = this.fb.group({
       role: ["senior", Validators.required],
       department: ["it", Validators.required],
       status: ["active", Validators.required],
     });
+    this.vendorForm = this.fb.group({
+      location: [""],
+      vendorName: [""],
+      storeId: [""],
+      status: [""],
+    });
   }
 
-  get f() {
-    return this.form.controls;
+  get uf() {
+    return this.userForm.controls;
+  }
+  get vf() {
+    return this.vendorForm.controls;
   }
 
   submit() {
-    console.log(this.form.value);
+    console.log(this.userForm.value);
   }
   reset() {
-    this.form.reset();
-    this.form.patchValue({
+    this.userForm.reset();
+    this.userForm.patchValue({
       role: "senior",
       department: "it",
       status: "active",
     });
+    this.vendorForm.reset();
   }
   close() {
     this.dialogRef.close();
-    this.form.reset();
+    this.userForm.reset();
+    this.vendorForm.reset();
   }
   ngOnInit(): void {}
 }

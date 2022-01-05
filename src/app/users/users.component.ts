@@ -69,7 +69,7 @@ export class UsersComponent implements OnInit {
   openFilter() {
     const dialogRef = this.dialog.open(FilterComponent, {
       width: "50%",
-      data: "user",
+      data: { filterType: "user" },
     });
   }
 }

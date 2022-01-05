@@ -28,3 +28,10 @@
   .mat-radio-outer-circle {
   border-color: #9e8656 !important; /*outer ring color change*/
 }
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: #9e8656 !important;
+}
+::ng-deep.mat-select-arrow {
+  color: #9e8656 !important;
+}
