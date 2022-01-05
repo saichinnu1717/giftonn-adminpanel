@@ -66,6 +66,7 @@ import { MaterialModule } from "./material/material.module";
 import { FilterComponent } from "./filter/filter.component";
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { VendorTaxesComponent } from './vendor-taxes/vendor-taxes.component';
+import { VendorActionsComponent } from './vendor-actions/vendor-actions.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -124,6 +125,7 @@ import { VendorTaxesComponent } from './vendor-taxes/vendor-taxes.component';
     FilterComponent,
     EditUserComponent,
     VendorTaxesComponent,
+    VendorActionsComponent,
   ],
   imports: [
     BrowserModule,
