@@ -11,6 +11,7 @@ export class VendorActionsComponent implements OnInit {
   vendorActionsForm: FormGroup;
   stars: number[] = [1, 2, 3, 4, 5];
   selectedValue: number = 0;
+  submitted = false;
   constructor(
     public dialogRef: MatDialogRef<VendorActionsComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -26,6 +27,13 @@ export class VendorActionsComponent implements OnInit {
   ngOnInit(): void {}
   close() {
     this.dialogRef.close();
+  }
+  submitForm() {
+    if (["Approve", "Freeze"].includes(this.data)) {
+      this.submitted = true;
+    } else {
+      close();
+    }
   }
   countStar(star) {
     this.selectedValue = star;
