@@ -8,7 +8,7 @@
   </div>
 </div>
 
-<Section style="margin-left: 20px">
+<section style="margin-left: 20px">
   <mat-card style="border-radius: 12px">
     <form [formGroup]="addVendorGroup">
       <div class="row">
@@ -299,20 +299,30 @@
         </div>
       </div>
     </form>
-    <div class="row">
-      <div class="col-md-2">
-        <Button class="login-button" type="submit" (click)="addVendorSubmit()"
-          >Save</Button
-        >
+    <div class="row mt-5">
+      <div class="col-md-6 col-sm-12">
+        <div class="d-flex justify-content-around">
+          <button
+            mat-flat-button
+            color="primary"
+            class="save-button mr-5"
+            (click)="addVendorSubmit()"
+          >
+            Save
+          </button>
+          <button mat-flat-button color="accent" class="cancel-button mr-5">
+            Cancel
+          </button>
+          <button
+            mat-flat-button
+            color="warn"
+            class="onboarding-button mr-5"
+            (click)="onBoarding()"
+          >
+            Onboarding
+          </button>
+        </div>
       </div>
-      <div class="col-md-2">
-        <Button class="Cancel-button">Cancel</Button>
-      </div>
-      <div class="col-md-2">
-        <Button class="onboarding-button" (click)="onBoarding()"
-          >Onboarding</Button
-        >
-      </div>
-    </div></mat-card
-  ></Section
->
+    </div>
+  </mat-card>
+</section>
