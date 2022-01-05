@@ -1,25 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-coupon',
-  templateUrl: './coupon.component.html',
-  styleUrls: ['./coupon.component.scss']
+  selector: "app-coupon",
+  templateUrl: "./coupon.component.html",
+  styleUrls: ["./coupon.component.scss"],
 })
 export class CouponComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router:Router) { }
-
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  back() {
+    this.router.navigate(["qr-redemption"]);
   }
-  back(){
-    this.router.navigate(['qr-redemption']);   
+  accept() {
+    this.router.navigate(["vendor-taxes"]);
   }
-  accept(){
-    this.router.navigate(['commission']);   
+  next() {
+    this.router.navigate(["vendor-taxes"]);
   }
-  next(){
-    this.router.navigate(['commission']);   
-  }
-
 }

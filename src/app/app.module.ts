@@ -65,6 +65,7 @@ import { AddESignatureComponent } from "./add-e-signature/add-e-signature.compon
 import { MaterialModule } from "./material/material.module";
 import { FilterComponent } from "./filter/filter.component";
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { VendorTaxesComponent } from './vendor-taxes/vendor-taxes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -122,6 +123,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     AddESignatureComponent,
     FilterComponent,
     EditUserComponent,
+    VendorTaxesComponent,
   ],
   imports: [
     BrowserModule,

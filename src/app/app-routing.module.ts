@@ -42,6 +42,7 @@ import { PaymentIntervalsComponent } from "./payment-intervals/payment-intervals
 import { CommissionsComponent } from "./commissions/commissions.component";
 import { AddESignatureComponent } from "./add-e-signature/add-e-signature.component";
 import { EditUserComponent } from "./edit-user/edit-user.component";
+import { VendorTaxesComponent } from "./vendor-taxes/vendor-taxes.component";
 const routes: Routes = [
   { path: "", redirectTo: "/dashboard", pathMatch: "full" },
   {
@@ -88,6 +89,7 @@ const routes: Routes = [
   { path: "onProduct-view", component: OnProductsComponent },
   { path: "pick-up", component: PickUpComponent },
   { path: "qr-redemption", component: QrRedemptionComponent },
+  { path: "vendor-taxes", component: VendorTaxesComponent },
   { path: "commission", component: CommissionsComponent },
   { path: "coupon", component: CouponComponent },
   { path: "payment-interval", component: PaymentIntervalsComponent },
