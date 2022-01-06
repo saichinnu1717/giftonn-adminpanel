@@ -11,6 +11,7 @@ export class FilterComponent implements OnInit {
   userForm: FormGroup;
   vendorForm: FormGroup;
   productForm: FormGroup;
+  customerForm: FormGroup;
   constructor(
     public dialogRef: MatDialogRef<FilterComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -35,6 +36,14 @@ export class FilterComponent implements OnInit {
       subCategory: [""],
       gender: [""],
       taxes: [""],
+      status: [""],
+    });
+    this.customerForm = this.fb.group({
+      customerId: [""],
+      country: [""],
+      location: [""],
+      rating: [""],
+      date: [""],
       status: [""],
     });
   }
