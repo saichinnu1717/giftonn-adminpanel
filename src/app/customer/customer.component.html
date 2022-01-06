@@ -131,8 +131,12 @@
               <mat-icon>arrow_drop_down</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
-              <button mat-menu-item (click)="action('Freeze')">Freeze</button>
-              <button mat-menu-item (click)="action('Rating')">Rating</button>
+              <button mat-menu-item (click)="freezeCustomer(customer)">
+                Freeze
+              </button>
+              <button mat-menu-item (click)="ratingCustomer(customer)">
+                Rating
+              </button>
             </mat-menu>
           </td>
         </tr>

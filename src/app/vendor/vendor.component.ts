@@ -60,14 +60,14 @@ export class VendorComponent implements OnInit {
   denyVendor(vendor) {
     const dialogRef = this.dialog.open(VendorActionsComponent, {
       width: "50%",
-      data: "Denay",
+      data: { name: "Denay", type: "vendor", data: vendor },
     });
     console.log("denyVendor : " + vendor.storeId);
   }
   freezeVendor(vendor) {
     const dialogRef = this.dialog.open(VendorActionsComponent, {
       width: "50%",
-      data: "Freeze",
+      data: { name: "Freeze", type: "vendor", data: vendor },
     });
     console.log("freezeVendor : " + vendor.storeId);
   }
@@ -80,7 +80,7 @@ export class VendorComponent implements OnInit {
   ratingVendor(vendor) {
     const dialogRef = this.dialog.open(VendorActionsComponent, {
       width: "50%",
-      data: "Rating",
+      data: { name: "Rating", type: "vendor", data: vendor },
     });
     console.log("ratingVendor : " + vendor.storeId);
   }

@@ -1,7 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
+import { FilterComponent } from "../filter/filter.component";
 import { FreezeRoleComponent } from "../freeze-role/freeze-role.component";
 import { RatingForCustomerComponent } from "../rating-for-customer/rating-for-customer.component";
+import { VendorActionsComponent } from "../vendor-actions/vendor-actions.component";
 
 @Component({
   selector: "app-customer",
@@ -36,6 +38,26 @@ export class CustomerComponent implements OnInit {
   constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
+  openFilter() {
+    const dialogRef = this.dialog.open(FilterComponent, {
+      width: "50%",
+      data: { filterType: "product" },
+    });
+  }
+  freezeCustomer(customer) {
+    const dialogRef = this.dialog.open(VendorActionsComponent, {
+      width: "50%",
+      data: { name: "Freeze", type: "customer", data: customer },
+    });
+    console.log("freezeVendor : " + customer.storeId);
+  }
+  ratingCustomer(customer) {
+    const dialogRef = this.dialog.open(VendorActionsComponent, {
+      width: "50%",
+      data: { name: "Rating", type: "customer", data: customer },
+    });
+    console.log("ratingVendor : " + customer.storeId);
+  }
   action(value) {
     console.log(value);
     if (value == "rating") {
