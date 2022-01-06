@@ -133,7 +133,7 @@ export class ProductComponent implements OnInit {
   }
   denyProduct(product) {
     const dialogRef = this.dialog.open(DenyProductComponent, {
-      width: "30%",
+      width: "50%",
       data: "product",
     });
     dialogRef.afterClosed().subscribe((result) => {

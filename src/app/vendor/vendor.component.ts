@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { Router } from "@angular/router";
+import { ApprovedModelComponent } from "../approved-model/approved-model.component";
 import { FilterComponent } from "../filter/filter.component";
 import { VendorActionsComponent } from "../vendor-actions/vendor-actions.component";
 @Component({
@@ -71,11 +72,10 @@ export class VendorComponent implements OnInit {
     console.log("freezeVendor : " + vendor.storeId);
   }
   approveVendor(vendor) {
-    const dialogRef = this.dialog.open(VendorActionsComponent, {
-      width: "50%",
-      data: "Approve",
+    const dialogRef = this.dialog.open(ApprovedModelComponent, {
+      width: "30%",
+      data: "vendor",
     });
-    console.log("approveVendor : " + vendor.storeId);
   }
   ratingVendor(vendor) {
     const dialogRef = this.dialog.open(VendorActionsComponent, {

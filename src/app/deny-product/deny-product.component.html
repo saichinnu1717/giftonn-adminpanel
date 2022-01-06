@@ -1,50 +1,64 @@
-<div class="row">
-     
-    <div class="col-sm-11 col-lg-11 col-sm-11 text-center" *ngIf="data=='partner'">
-        <h3>Deny Partner</h3>
+<div mat-dialog-content class="rounded">
+  <div class="d-flex justify-content-between">
+    <div></div>
+    <div>
+      <p *ngIf="data == 'partner'" class="lable-font-title">Deny Partner</p>
+      <p *ngIf="data == 'product'" class="lable-font-title">Deny Product</p>
+      <p *ngIf="data == 'promotion'" class="lable-font-title">Deny Promotion</p>
+      <p *ngIf="data == 'productLauncher'" class="lable-font-title">
+        Deny Product Launcher
+      </p>
+      <p *ngIf="data == 'offer'" class="lable-font-title">Deny Offer</p>
     </div>
-    <div class="col-sm-11 col-lg-11 col-sm-11 text-center" *ngIf="data=='product'">
-        <h3>Deny Product</h3>
+    <div class="example-button-container">
+      <button
+        mat-mini-fab
+        color="warn"
+        (click)="close()"
+        style="background: #e04f5f"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
     </div>
-    <div class="col-sm-11 col-lg-11 col-sm-11 text-center" *ngIf="data=='promotion'">
-        <h3>Deny Promotion</h3>
-    </div>
-    <div class="col-sm-11 col-lg-11 col-sm-11 text-center" *ngIf="data=='productLauncher'">
-        <h3>Deny Product Launcher</h3>
-    </div>
-    <div class="col-sm-11 col-lg-11 col-sm-11 text-center" *ngIf="data=='offer'">
-        <h3>Deny Offer </h3>
-    </div>
-    <div class="col-sm-1 col-lg-1 col-sm-1" (click)="close()">
-        <img src="../../assets/cancel%20(1).svg" width="20px" alt="">
-    </div>
-</div>
-
-
-<form [formGroup]="denyProduct" (ngSubmit)="denyProductSubmit()">
-<div class="row">
-<div class="col-sm-8 col-lg-8 col-sm-8 justify-content-center offset-2">
-        <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>DROP DOWN</mat-label>
-            <mat-select formControlName="dropDown">
-              <mat-option  value="">Selete option</mat-option>
-              <mat-option value="accent">Accent</mat-option>
-              <mat-option value="warn">Warn</mat-option>
+  </div>
+  <div>
+    <form
+      [formGroup]="denyProduct"
+      (ngSubmit)="denyProductSubmit()"
+      class="m-5 pl-5"
+    >
+      <div class="row mx-5 px-5 mt-3">
+        <div class="col-sm-12" *ngIf="data != 'Rating'">
+          <p class="m-0 form-lable">REASON</p>
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-select formControlName="reason" placeholder="Selete Reason">
+              <mat-option value=""> Selete Reason </mat-option>
+              <mat-option value="india"> India </mat-option>
+              <mat-option value="afghanistan"> Afghanistan </mat-option>
             </mat-select>
           </mat-form-field>
-      
+        </div>
+        <div class="col-md-12 col-lg-12 col-sm-12 my-3">
+          <mat-form-field class="full-width" appearance="outline">
+            <textarea
+              matInput
+              formControlName="text"
+              rows="7"
+              cols="40"
+              placeholder="write here..."
+            ></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 mt-3 pt-5">
+          <div class="d-flex justify-content-around">
+            <button mat-flat-button color="primary" class="submit-button mr-5">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
-<div class="col-sm-8 col-lg-8 col-sm-8 justify-content-center offset-2">
-    <mat-form-field class="example-full-width" appearance="outline">
-        <mat-label>Write here</mat-label>
-        <textarea matInput formControlName="description" placeholder="write here"></textarea>
-      </mat-form-field>
-</div>
-
-</div>
-<div class="row">
-<div class="col-md-3 offset-5">
-    <Button class="login-button" type="submit">Save</Button>
-</div>
-</div>
-</form>
