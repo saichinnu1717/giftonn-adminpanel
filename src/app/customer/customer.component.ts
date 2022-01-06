@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
+import { ApprovedModelComponent } from "../approved-model/approved-model.component";
 import { FilterComponent } from "../filter/filter.component";
 import { FreezeRoleComponent } from "../freeze-role/freeze-role.component";
 import { RatingForCustomerComponent } from "../rating-for-customer/rating-for-customer.component";
@@ -42,6 +43,12 @@ export class CustomerComponent implements OnInit {
     const dialogRef = this.dialog.open(FilterComponent, {
       width: "50%",
       data: { filterType: "customer" },
+    });
+  }
+  approveCustomer() {
+    const dialogRef = this.dialog.open(ApprovedModelComponent, {
+      width: "30%",
+      data: "customer",
     });
   }
   freezeCustomer(customer) {

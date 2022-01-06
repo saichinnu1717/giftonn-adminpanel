@@ -11,6 +11,12 @@
     <p class="form-lable">User Approved Successfully</p>
   </div>
   <div
+    *ngIf="data == 'customer'"
+    class="col-md-12 col-sm-12 col-lg-12 d-flex justify-content-center mt-2"
+  >
+    <p class="form-lable">Customer Approved Successfully</p>
+  </div>
+  <div
     *ngIf="data == 'vendor'"
     class="col-md-12 col-sm-12 col-lg-12 d-flex justify-content-center mt-2"
   >

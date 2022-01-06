@@ -131,6 +131,9 @@
               <mat-icon>arrow_drop_down</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="approveCustomer(customer)">
+                Approve
+              </button>
               <button mat-menu-item (click)="freezeCustomer(customer)">
                 Freeze
               </button>
