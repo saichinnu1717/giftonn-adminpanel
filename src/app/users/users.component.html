@@ -52,7 +52,6 @@
           <button
             mat-stroked-button
             color="accent"
-            style="font-size: 18px"
             class="btn-outline-35"
             (click)="download('xls')"
           >
@@ -63,7 +62,6 @@
           <button
             mat-stroked-button
             color="accent"
-            style="font-size: 18px"
             class="btn-outline-35"
             (click)="download('pdf')"
           >
@@ -85,43 +83,44 @@
       </mat-form-field>
     </div>
   </div>
-
-  <table class="table table-striped table-responsive">
-    <thead>
-      <tr>
-        <th>Emp ID</th>
-        <th>Emolpyee Name</th>
-        <th>Email</th>
-        <th>Role</th>
-        <th>Status</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of userData">
-        <td>{{ user.empid }}</td>
-        <td>{{ user.firstName + " " + user.lastName }}</td>
-        <td>{{ user.email }}</td>
-        <td>{{ user.role }}</td>
-        <td>
-          <div
-            class="badge rounded font-weight-bold"
-            [ngClass]="
-              user.status == 'ACTIVE' ? 'badge-success' : 'badge-danger'
-            "
-          >
-            <span style="font-size: 16px"> {{ user.status }} </span>
-          </div>
-        </td>
-        <td>
-          <button mat-icon-button (click)="editUser(user)">
-            <mat-icon>edit_note</mat-icon>
-          </button>
-          <button mat-icon-button (click)="deleteModel()">
-            <mat-icon style="color: #fa4242">delete</mat-icon>
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Emp ID</th>
+          <th>Emolpyee Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userData">
+          <td>{{ user.empid }}</td>
+          <td>{{ user.firstName + " " + user.lastName }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.role }}</td>
+          <td>
+            <div
+              class="badge rounded font-weight-bold"
+              [ngClass]="
+                user.status == 'ACTIVE' ? 'badge-success' : 'badge-danger'
+              "
+            >
+              <span style="font-size: 16px"> {{ user.status }} </span>
+            </div>
+          </td>
+          <td>
+            <button mat-icon-button (click)="editUser(user)">
+              <mat-icon>edit_note</mat-icon>
+            </button>
+            <button mat-icon-button (click)="deleteModel()">
+              <mat-icon style="color: #fa4242">delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
