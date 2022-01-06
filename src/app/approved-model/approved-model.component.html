@@ -4,46 +4,10 @@
       <img src="../../../../assets/thumbs-up-hand-symbol.svg" alt="" />
     </div>
   </div>
-  <div
-    *ngIf="data == 'user'"
-    class="col-md-12 col-sm-12 col-lg-12 d-flex justify-content-center mt-2"
-  >
-    <p class="form-lable">User Approved Successfully</p>
-  </div>
-  <div
-    *ngIf="data == 'customer'"
-    class="col-md-12 col-sm-12 col-lg-12 d-flex justify-content-center mt-2"
-  >
-    <p class="form-lable">Customer Approved Successfully</p>
-  </div>
-  <div
-    *ngIf="data == 'vendor'"
-    class="col-md-12 col-sm-12 col-lg-12 d-flex justify-content-center mt-2"
-  >
-    <p class="form-lable">Vendor Approved Successfully</p>
-  </div>
-  <div
-    *ngIf="data == 'product'"
-    class="col-md-12 col-sm-12 col-lg-12 d-flex justify-content-center mt-2"
-  >
-    <p class="form-lable">Product Approved Successfully</p>
-  </div>
-  <div
-    *ngIf="data == 'promotion'"
-    class="col-md-12 col-sm-12 col-lg-12 d-flex justify-content-center mt-2"
-  >
-    <p class="form-lable">Promotion Approved Successfully</p>
-  </div>
-  <div
-    *ngIf="data == 'productLauncher'"
-    class="col-md-12 col-sm-12 col-lg-12 d-flex justify-content-center mt-2"
-  >
-    <p class="form-lable">Product Launcher Approved Successfully</p>
-  </div>
-  <div
-    *ngIf="data == 'purchasersOrder'"
-    class="col-md-12 col-sm-12 col-lg-12 d-flex justify-content-center mt-2"
-  >
-    <p class="form-lable">Purchasers Order Approved Successfully</p>
+
+  <div class="col-md-12 col-sm-12 col-lg-12 d-flex justify-content-center mt-2">
+    <p class="form-lable">
+      {{ (data | titlecase) + " " + "Customer Approved Successfully" }}
+    </p>
   </div>
 </div>

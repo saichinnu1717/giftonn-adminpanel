@@ -3,7 +3,9 @@
     <div class="d-flex justify-content-between">
       <div></div>
       <div>
-        <p class="lable-font-title">{{ data.name + " Vendor" }}</p>
+        <p class="lable-font-title">
+          {{ data.name + " " + (data.type | titlecase) }}
+        </p>
       </div>
       <div class="example-button-container">
         <button

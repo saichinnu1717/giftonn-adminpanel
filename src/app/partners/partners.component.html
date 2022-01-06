@@ -1,148 +1,153 @@
-<section >
-    <div class="row">
-        <div class="col-lg-6 admins_head">
-            <h6>Partners</h6> 
-        </div>
-        <div class="col-lg-6 product_btn">
-            <h6 (click)="addPartner()"> Add Partners</h6> 
-        </div>
+<div class="d-flex justify-content-between pb-4">
+  <div class="pl-5">
+    <p class="lable-font-title">Patners</p>
+  </div>
+  <div class="d-flex justify-content-end">
+    <div class="pr-4">
+      <button
+        mat-stroked-button
+        color="primary"
+        class="filter-btn"
+        (click)="openFilter()"
+      >
+        Filter
+        <mat-icon>filter_list</mat-icon>
+      </button>
     </div>
-</section>
-<section class="table_box" style="margin-left: 20px;">
-    <div class="row">
-        <div class="col-lg-6 export_btn"><h6>Export:</h6><a>csv</a><a>xls</a><a>pdf</a> </div>
-        <div class="col-lg-5 col-md-5 col-sm-5 d-flex justify-content-end" style="margin-right:25px">
-            <form class="search-form">
-                <mat-form-field class="form_field search_btn"  appearance="outline">
-                    <mat-icon class="form_field" matSuffix>search</mat-icon>
-                    <input matInput type="search" placeholder="search" class="search-input">
-                </mat-form-field>
-            </form>     
-        </div>
+    <div>
+      <button
+        mat-stroked-button
+        color="accent"
+        class="add-user-btn"
+        (click)="addPatner()"
+      >
+        Add Patner
+      </button>
     </div>
-    <table class="table table-striped table-hover tab_admin prod_tab">
-        <thead>  
-            <tr>
-                <th style="padding-left: 20px;">logo</th>  
-                <th class="th_wid text-center">Name</th>  
-                <th class="th_wid text-center">Email Id</th>   
-                <th class="th_wid text-center">Location</th>  
-                <th class="th_wid" style="padding-left: 28px;">Action</th>  
-            </tr>  
-        </thead>  
-        <tbody>  
-            <tr>  
-                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
-                <td class="text-center">LG</td>
-                <td class="text-center">rajeshsharma@gmail.com</td>  
-                <td class="text-center">Hyderabad</td>  
-                 <td class="selec_option" (change)="action($event.target.value)">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Option </option>
-                        <option value="deny">Deny</option>
-                        <option value="freeze">Freeze</option>
-                        <option value="rating">Rating</option>
-                    </select>
-                </td>
-            </tr>  
-            <tr>  
-                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
-                <td class="text-center">MG</td>
-                <td class="text-center">rajeshsharma@gmail.com</td>  
-                <td class="text-center">Hyderabad</td>  
-                <td class="selec_option" (change)="action($event.target.value)">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Option </option>
-                        <option value="deny">Deny</option>
-                        <option value="freeze">Freeze</option>
-                        <option value="rating">Rating</option>
-                    </select>
-                </td>
-            </tr> 
-            <tr>  
-                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
-                <td class="text-center">Sumsung</td>
-                <td class="text-center">rajeshsharma@gmail.com</td>  
-                <td class="text-center">Hyderabad</td>  
-                <td class="selec_option" (change)="action($event.target.value)">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Option </option>
-                        <option value="deny">Deny</option>
-                        <option value="freeze">Freeze</option>
-                        <option value="rating">Rating</option>
-                    </select>
-                </td>
-            </tr> 
-            <tr>  
-                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
-                <td class="text-center">LG</td>
-                <td class="text-center">rajeshsharma@gmail.com</td>  
-                <td class="text-center">Hyderabad</td>  
-                <td class="selec_option" (change)="action($event.target.value)">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Option </option>
-                        <option value="deny">Deny</option>
-                        <option value="freeze">Freeze</option>
-                        <option value="rating">Rating</option>
-                    </select>
-                </td>
-            </tr>  
-            <tr>  
-                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
-                <td class="text-center">LG</td>
-                <td class="text-center">rajeshsharma@gmail.com</td>  
-                <td class="text-center">Hyderabad</td>  
-                <td class="selec_option" (change)="action($event.target.value)">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Option </option>
-                        <option value="deny">Deny</option>
-                        <option value="freeze">Freeze</option>
-                        <option value="rating">Rating</option>
-                    </select>
-                </td>
-            </tr>  
-            <tr>  
-                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
-                <td class="text-center">LG</td>
-                <td class="text-center">rajeshsharma@gmail.com</td>  
-                <td class="text-center">Hyderabad</td>  
-                <td class="selec_option" (change)="action($event.target.value)">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Option </option>
-                        <option value="deny">Deny</option>
-                        <option value="freeze">Freeze</option>
-                        <option value="rating">Rating</option>
-                    </select>
-                </td>
-            </tr>  
-            <tr>  
-                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
-                <td class="text-center">LG</td>
-                <td class="text-center">rajeshsharma@gmail.com</td>  
-                <td class="text-center">Hyderabad</td>  
-                <td class="selec_option" (change)="action($event.target.value)">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Option </option>
-                        <option value="deny">Deny</option>
-                        <option value="freeze">Freeze</option>
-                        <option value="rating">Rating</option>
-                    </select>
-                </td>
-            </tr> 
-            <tr>  
-                <td class="img_tab"><img src ="../../../../assets/xiaomi.png"></td>   
-                <td class="text-center">LG</td>
-                <td class="text-center">rajeshsharma@gmail.com</td>  
-                <td class="text-center">Hyderabad</td>  
-                <td class="selec_option" (change)="action($event.target.value)">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Option </option>
-                        <option value="deny">Deny</option>
-                        <option value="freeze">Freeze</option>
-                        <option value="rating">Rating</option>
-                    </select>
-                </td>
-            </tr>             
-        </tbody>  
+  </div>
+</div>
+<div class="ml-4 shadow-lg bg-white rounded">
+  <div class="d-flex justify-content-between">
+    <div class="justify-content-center align-self-center">
+      <div class="d-flex justify-content-start">
+        <div class="text-muted pl-2 justify-content-center align-self-center">
+          <span class="font-weight-bold align-middle pr-3">Export: </span>
+        </div>
+        <div class="pr-3">
+          <button
+            mat-stroked-button
+            color="accent"
+            class="btn-outline-35"
+            (click)="download('csv')"
+          >
+            CSV
+          </button>
+        </div>
+        <div class="pr-3">
+          <button
+            mat-stroked-button
+            color="accent"
+            class="btn-outline-35"
+            (click)="download('xls')"
+          >
+            XLS
+          </button>
+        </div>
+        <div class="pr-3">
+          <button
+            mat-stroked-button
+            color="accent"
+            style="font-size: 18px"
+            class="btn-outline-35"
+            (click)="download('pdf')"
+          >
+            PDF
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex align-content-center pt-3">
+      <mat-form-field appearance="outline" style="font-size: 20px" class="pr-3">
+        <mat-icon matSuffix>search</mat-icon>
+        <input
+          matInput
+          type="search"
+          placeholder="search"
+          class="search-input"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="table-responsive py-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Logo</th>
+          <th>Patner Name</th>
+          <th>Patner ID</th>
+          <th>Patner Email Id</th>
+          <th>Category</th>
+          <th>Sub Category</th>
+          <th>Country</th>
+          <th>Location</th>
+          <th>Rating</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let patner of patners">
+          <!-- <td>{{ patner.logo }}</td> -->
+          <td class="img_tab"><img src="../../../../assets/gift.jpeg" /></td>
+          <td>{{ patner.patnerName }}</td>
+          <td>{{ patner.patnerId }}</td>
+          <td>{{ patner.patnerEmailId }}</td>
+          <td>{{ patner.category }}</td>
+          <td>{{ patner.subCategory }}</td>
+          <td>{{ patner.country }}</td>
+          <td>{{ patner.location }}</td>
+          <td>{{ patner.rating }}</td>
+          <td>
+            <div
+              class="font-weight-bold"
+              [ngClass]="
+                patner.status.toUpperCase() == 'APPROVED'
+                  ? 'text-success'
+                  : patner.status.toUpperCase() == 'PENDING'
+                  ? 'text-warning'
+                  : 'text-danger'
+              "
+            >
+              <span style="font-size: 16px"> {{ patner.status }} </span>
+            </div>
+          </td>
+          <td>
+            <button
+              mat-button
+              [matMenuTriggerFor]="menu"
+              mat-flat-button
+              color="warn"
+            >
+              Options
+              <mat-icon>arrow_drop_down</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="approvePatner(patner)">
+                Approve
+              </button>
+              <button mat-menu-item (click)="denyPatner(patner)">Deny</button>
+              <button mat-menu-item (click)="freezePatner(patner)">
+                Freeze
+              </button>
+
+              <button mat-menu-item (click)="ratingPatner(patner)">
+                Rating
+              </button>
+            </mat-menu>
+          </td>
+        </tr>
+      </tbody>
     </table>
-</section>
+  </div>
+</div>
