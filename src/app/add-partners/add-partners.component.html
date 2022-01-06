@@ -10,7 +10,7 @@
 
 <Section style="margin-left: 20px">
   <mat-card>
-    <form [formGroup]="addPartnersGroup" (ngSubmit)="addPartnersSubmit()">
+    <form [formGroup]="addPartnersGroup">
       <div class="row">
         <div class="col-md-6 col-lg-6 col-sm-6">
           <p class="m-0 form-lable">PARTNERS NAME</p>
@@ -260,13 +260,31 @@
       <div class="row mt-5">
         <div class="col-md-6 col-sm-12">
           <div class="d-flex justify-content-around">
-            <button mat-flat-button color="primary" class="save-button mr-5">
+            <button
+              mat-flat-button
+              color="primary"
+              class="save-button mr-5"
+              type="button"
+              (click)="savePartner()"
+            >
               Save
             </button>
-            <button mat-flat-button color="accent" class="cancel-button mr-5">
+            <button
+              mat-flat-button
+              color="accent"
+              class="cancel-button mr-5"
+              type="button"
+              (click)="cancleOnboardPartener()"
+            >
               Cancel
             </button>
-            <button mat-flat-button color="warn" class="onboarding-button mr-5">
+            <button
+              mat-flat-button
+              color="warn"
+              class="onboarding-button mr-5"
+              type="button"
+              (click)="onboardPartner()"
+            >
               Onboarding
             </button>
           </div>
