@@ -3,6 +3,7 @@ import { MatDialog } from "@angular/material/dialog";
 import { Router } from "@angular/router";
 import { ApprovedModelComponent } from "../approved-model/approved-model.component";
 import { DenyProductComponent } from "../deny-product/deny-product.component";
+import { FilterComponent } from "../filter/filter.component";
 import { FreezedModelComponent } from "../freezed-model/freezed-model.component";
 import { SuccessfulModelComponent } from "../successful-model/successful-model.component";
 @Component({
@@ -114,6 +115,12 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {}
   addProduct() {
     this.router.navigate(["add-product"]);
+  }
+  openFilter() {
+    const dialogRef = this.dialog.open(FilterComponent, {
+      width: "50%",
+      data: { filterType: "product" },
+    });
   }
   approveProduct(product) {
     const dialogRef = this.dialog.open(ApprovedModelComponent, {

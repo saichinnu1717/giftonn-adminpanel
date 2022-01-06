@@ -18,8 +18,8 @@
   <div *ngIf="data.filterType == 'user'">
     <form [formGroup]="form" (ngSubmit)="submit()" class="m-5 pl-5">
       <div>
-        <div class="font-weight-bold py-4" style="font-size: 15px">
-          <span>Role</span>
+        <div class="py-4">
+          <p class="form-lable">Role</p>
         </div>
         <mat-radio-group formControlName="role">
           <mat-radio-button value="senior" class="pr-5 mr-5"
@@ -34,8 +34,8 @@
         </mat-radio-group>
       </div>
       <div>
-        <div class="font-weight-bold py-4" style="font-size: 15px">
-          <span>Department</span>
+        <div class="py-4">
+          <p class="form-lable">Department</p>
         </div>
         <mat-radio-group formControlName="department">
           <mat-radio-button value="it" class="pr-5 mr-5">IT</mat-radio-button>
@@ -51,8 +51,8 @@
         </mat-radio-group>
       </div>
       <div>
-        <div class="font-weight-bold py-4" style="font-size: 15px">
-          <span>Status</span>
+        <div class="py-4">
+          <p class="form-lable">Status</p>
         </div>
         <mat-radio-group formControlName="status">
           <mat-radio-button value="active" class="pr-5 mr-5"
@@ -84,7 +84,7 @@
     <form [formGroup]="vendorForm" (ngSubmit)="submit()" class="m-5 pl-5">
       <div class="row">
         <div class="col-sm-12">
-          <h2>Location</h2>
+          <p class="form-lable">Location</p>
           <mat-form-field appearance="fill" style="width: 100%">
             <mat-label>Select Location</mat-label>
             <mat-select formControlName="location">
@@ -95,7 +95,7 @@
           </mat-form-field>
         </div>
         <div class="col-md-6 col-sm-12">
-          <h2>Vendor Name</h2>
+          <p class="form-lable">Vendor Name</p>
           <mat-form-field appearance="fill" style="width: 100%">
             <mat-label>Select Name</mat-label>
             <mat-select formControlName="vendorName">
@@ -106,7 +106,7 @@
           </mat-form-field>
         </div>
         <div class="col-md-6 col-sm-12">
-          <h2>Store Id</h2>
+          <p class="form-lable">Store Id</p>
           <mat-form-field appearance="fill" style="width: 100%">
             <mat-label>Select Store Id</mat-label>
             <mat-select formControlName="storeId">
@@ -117,7 +117,113 @@
           </mat-form-field>
         </div>
         <div class="col-sm-12">
-          <h2>Status</h2>
+          <p class="form-lable">Status</p>
+          <mat-radio-group formControlName="status">
+            <mat-radio-button value="active" class="pr-5 mr-5"
+              >Pending</mat-radio-button
+            >
+            <mat-radio-button value="inactive" class="pr-5 mr-5"
+              >Approved</mat-radio-button
+            >
+            <mat-radio-button value="inactive" class="pr-5 mr-5"
+              >Freeze</mat-radio-button
+            >
+            <mat-radio-button value="inactive" class="pr-5 mr-5"
+              >Rating</mat-radio-button
+            >
+          </mat-radio-group>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-around pt-4">
+        <div>
+          <button
+            type="button"
+            mat-button
+            class="outline-button"
+            (click)="reset()"
+          >
+            Reset
+          </button>
+        </div>
+        <div>
+          <button type="button" mat-button class="rounded-button">Apply</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="data.filterType == 'product'">
+    <form [formGroup]="productForm" (ngSubmit)="submit()" class="m-5 pl-5">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <p class="m-0 form-lable">Product ID</p>
+          <mat-form-field appearance="fill" style="width: 100%">
+            <mat-select
+              formControlName="productId"
+              placeholder="Select Product Id"
+            >
+              <mat-option value="hyderabad"> Hyderabad </mat-option>
+              <mat-option value="banglore"> Banglore </mat-option>
+              <mat-option value="chenni"> Chenni </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <p class="m-0 form-lable">STORE ID</p>
+          <mat-form-field appearance="fill" style="width: 100%">
+            <mat-select formControlName="storeId" placeholder="Select Store Id">
+              <mat-option value="hyderabad"> Joyalukkas </mat-option>
+              <mat-option value="banglore"> Malabar Gold </mat-option>
+              <mat-option value="chenni"> Kalyan </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <p class="m-0 form-lable">Category</p>
+          <mat-form-field appearance="fill" style="width: 100%">
+            <mat-select
+              formControlName="category"
+              placeholder="Select Category"
+            >
+              <mat-option value="hyderabad"> Joyalukkas </mat-option>
+              <mat-option value="banglore"> Malabar Gold </mat-option>
+              <mat-option value="chenni"> Kalyan </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <p class="m-0 form-lable">Sub Category</p>
+          <mat-form-field appearance="fill" style="width: 100%">
+            <mat-select
+              formControlName="subCategory"
+              placeholder="Select Sub Category"
+            >
+              <mat-option value="hyderabad"> Joyalukkas </mat-option>
+              <mat-option value="banglore"> Malabar Gold </mat-option>
+              <mat-option value="chenni"> Kalyan </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <p class="m-0 form-lable">Gender</p>
+          <mat-form-field appearance="fill" style="width: 100%">
+            <mat-select formControlName="gender" placeholder="Select Gender">
+              <mat-option value="male"> Male </mat-option>
+              <mat-option value="female"> Female </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <p class="m-0 form-lable">Taxes</p>
+          <mat-form-field appearance="fill" style="width: 100%">
+            <mat-select formControlName="taxes" placeholder="Select Taxes">
+              <mat-option value="male"> Male </mat-option>
+              <mat-option value="female"> Female </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12">
+          <p class="form-lable">Status</p>
           <mat-radio-group formControlName="status">
             <mat-radio-button value="active" class="pr-5 mr-5"
               >Pending</mat-radio-button

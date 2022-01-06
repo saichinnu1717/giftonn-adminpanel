@@ -10,6 +10,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
 export class FilterComponent implements OnInit {
   userForm: FormGroup;
   vendorForm: FormGroup;
+  productForm: FormGroup;
   constructor(
     public dialogRef: MatDialogRef<FilterComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -27,6 +28,15 @@ export class FilterComponent implements OnInit {
       storeId: [""],
       status: [""],
     });
+    this.productForm = this.fb.group({
+      productId: [""],
+      storeId: [""],
+      category: [""],
+      subCategory: [""],
+      gender: [""],
+      taxes: [""],
+      status: [""],
+    });
   }
 
   get uf() {
@@ -34,6 +44,9 @@ export class FilterComponent implements OnInit {
   }
   get vf() {
     return this.vendorForm.controls;
+  }
+  get pf() {
+    return this.productForm.controls;
   }
 
   submit() {
@@ -47,11 +60,11 @@ export class FilterComponent implements OnInit {
       status: "active",
     });
     this.vendorForm.reset();
+    this.productForm.reset();
   }
   close() {
     this.dialogRef.close();
-    this.userForm.reset();
-    this.vendorForm.reset();
+    this.reset();
   }
   ngOnInit(): void {}
 }
