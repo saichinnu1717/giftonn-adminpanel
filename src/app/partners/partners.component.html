@@ -100,7 +100,11 @@
         <tr *ngFor="let patner of patners">
           <!-- <td>{{ patner.logo }}</td> -->
           <td class="img_tab"><img src="../../../../assets/gift.jpeg" /></td>
-          <td>{{ patner.patnerName }}</td>
+          <td>
+            <a href="javascript:void(0);" (click)="viewPartner(partner)">
+              {{ patner.patnerName }}
+            </a>
+          </td>
           <td>{{ patner.patnerId }}</td>
           <td>{{ patner.patnerEmailId }}</td>
           <td>{{ patner.category }}</td>

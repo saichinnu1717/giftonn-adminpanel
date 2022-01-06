@@ -67,6 +67,7 @@ import { FilterComponent } from "./filter/filter.component";
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { VendorTaxesComponent } from './vendor-taxes/vendor-taxes.component';
 import { VendorActionsComponent } from './vendor-actions/vendor-actions.component';
+import { ViewPartnerComponent } from './view-partner/view-partner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -126,6 +127,7 @@ import { VendorActionsComponent } from './vendor-actions/vendor-actions.componen
     EditUserComponent,
     VendorTaxesComponent,
     VendorActionsComponent,
+    ViewPartnerComponent,
   ],
   imports: [
     BrowserModule,

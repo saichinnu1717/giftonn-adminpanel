@@ -7,6 +7,7 @@ import { FilterComponent } from "../filter/filter.component";
 import { FreezeRoleComponent } from "../freeze-role/freeze-role.component";
 import { RatingForCustomerComponent } from "../rating-for-customer/rating-for-customer.component";
 import { VendorActionsComponent } from "../vendor-actions/vendor-actions.component";
+import { ViewPartnerComponent } from "../view-partner/view-partner.component";
 
 @Component({
   selector: "app-partners",
@@ -43,6 +44,12 @@ export class PartnersComponent implements OnInit {
   ngOnInit(): void {}
   addPartner() {
     this.router.navigate(["add-Partners"]);
+  }
+  viewPartner(partner) {
+    const dialogRef = this.dialog.open(ViewPartnerComponent, {
+      width: "50%",
+      data: partner,
+    });
   }
   openFilter() {
     const dialogRef = this.dialog.open(FilterComponent, {
