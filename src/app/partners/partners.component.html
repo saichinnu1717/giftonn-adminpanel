@@ -101,7 +101,11 @@
           <!-- <td>{{ partner.logo }}</td> -->
           <td class="img_tab"><img [src]="partner.logo" /></td>
           <td>
-            <a href="javascript:void(0);" (click)="viewPartner(partner)">
+            <a
+              href="javascript:void(0);"
+              (click)="viewPartner(partner)"
+              style="color: #9e8656"
+            >
               {{ partner.partnerName }}
             </a>
           </td>
