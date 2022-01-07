@@ -17,26 +17,34 @@ import { ViewPartnerComponent } from "../view-partner/view-partner.component";
 export class PartnersComponent implements OnInit {
   patners = [
     {
-      patnerName: "Apple",
-      patnerId: "Ap1231",
-      patnerEmailId: "apple@gmail.com",
+      logo: "assets/gift.jpeg",
+      partnerName: "Apple",
+      partnerId: "Ap1231",
+      partnerEmailId: "apple@gmail.com",
       category: "Electronics",
       subCategory: "iPhone12 mini",
       country: "india",
       location: "Hyderabad",
       rating: "4.3",
       status: "Approved",
+      contactNumber: "1234567890",
+      state: "Telangana",
+      address: "Hyderabad,Telangana,50054",
     },
     {
-      patnerName: "Apple",
-      patnerId: "Ap1232",
-      patnerEmailId: "apple@gmail.com",
+      logo: "assets/gift.jpeg",
+      partnerName: "Apple",
+      partnerId: "Ap1232",
+      partnerEmailId: "apple@gmail.com",
       category: "Electronics",
       subCategory: "iPhone12 mini",
       country: "india",
       location: "Hyderabad",
       rating: "4.3",
       status: "Pending",
+      contactNumber: "1234567890",
+      state: "Telangana",
+      address: "Hyderabad,Telangana,50054",
     },
   ];
   constructor(private router: Router, public dialog: MatDialog) {}
@@ -47,7 +55,8 @@ export class PartnersComponent implements OnInit {
   }
   viewPartner(partner) {
     const dialogRef = this.dialog.open(ViewPartnerComponent, {
-      width: "50%",
+      width: "70%",
+      height: "80%",
       data: partner,
     });
   }
@@ -57,7 +66,7 @@ export class PartnersComponent implements OnInit {
       data: { filterType: "partner" },
     });
   }
-  approvePatner(patner) {
+  approvePatner(partner) {
     const dialogRef = this.dialog.open(ApprovedModelComponent, {
       width: "30%",
       data: "partner",
@@ -66,28 +75,28 @@ export class PartnersComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-  freezePatner(patner) {
+  freezePatner(partner) {
     const dialogRef = this.dialog.open(VendorActionsComponent, {
       width: "50%",
-      data: { name: "Freeze", type: "partner", data: patner },
+      data: { name: "Freeze", type: "partner", data: partner },
     });
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
     });
   }
-  denyPatner(patner) {
+  denyPatner(partner) {
     const dialogRef = this.dialog.open(VendorActionsComponent, {
       width: "50%",
-      data: { name: "Denay", type: "partner", data: patner },
+      data: { name: "Denay", type: "partner", data: partner },
     });
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
     });
   }
-  ratingPatner(patner) {
+  ratingPatner(partner) {
     const dialogRef = this.dialog.open(VendorActionsComponent, {
       width: "50%",
-      data: { name: "Rating", type: "partner", data: patner },
+      data: { name: "Rating", type: "partner", data: partner },
     });
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);

@@ -12,7 +12,9 @@ export class ViewPartnerComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.data);
+  }
   close() {
     this.dialogRef.close();
   }

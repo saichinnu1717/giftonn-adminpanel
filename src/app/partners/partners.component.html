@@ -97,33 +97,33 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let patner of patners">
-          <!-- <td>{{ patner.logo }}</td> -->
-          <td class="img_tab"><img src="../../../../assets/gift.jpeg" /></td>
+        <tr *ngFor="let partner of patners">
+          <!-- <td>{{ partner.logo }}</td> -->
+          <td class="img_tab"><img [src]="partner.logo" /></td>
           <td>
             <a href="javascript:void(0);" (click)="viewPartner(partner)">
-              {{ patner.patnerName }}
+              {{ partner.partnerName }}
             </a>
           </td>
-          <td>{{ patner.patnerId }}</td>
-          <td>{{ patner.patnerEmailId }}</td>
-          <td>{{ patner.category }}</td>
-          <td>{{ patner.subCategory }}</td>
-          <td>{{ patner.country }}</td>
-          <td>{{ patner.location }}</td>
-          <td>{{ patner.rating }}</td>
+          <td>{{ partner.partnerId }}</td>
+          <td>{{ partner.partnerEmailId }}</td>
+          <td>{{ partner.category }}</td>
+          <td>{{ partner.subCategory }}</td>
+          <td>{{ partner.country }}</td>
+          <td>{{ partner.location }}</td>
+          <td>{{ partner.rating }}</td>
           <td>
             <div
               class="font-weight-bold"
               [ngClass]="
-                patner.status.toUpperCase() == 'APPROVED'
+                partner.status.toUpperCase() == 'APPROVED'
                   ? 'text-success'
-                  : patner.status.toUpperCase() == 'PENDING'
+                  : partner.status.toUpperCase() == 'PENDING'
                   ? 'text-warning'
                   : 'text-danger'
               "
             >
-              <span style="font-size: 16px"> {{ patner.status }} </span>
+              <span style="font-size: 16px"> {{ partner.status }} </span>
             </div>
           </td>
           <td>
@@ -137,15 +137,15 @@
               <mat-icon>arrow_drop_down</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
-              <button mat-menu-item (click)="approvePatner(patner)">
+              <button mat-menu-item (click)="approvePatner(partner)">
                 Approve
               </button>
-              <button mat-menu-item (click)="denyPatner(patner)">Deny</button>
-              <button mat-menu-item (click)="freezePatner(patner)">
+              <button mat-menu-item (click)="denyPatner(partner)">Deny</button>
+              <button mat-menu-item (click)="freezePatner(partner)">
                 Freeze
               </button>
 
-              <button mat-menu-item (click)="ratingPatner(patner)">
+              <button mat-menu-item (click)="ratingPatner(partner)">
                 Rating
               </button>
             </mat-menu>
