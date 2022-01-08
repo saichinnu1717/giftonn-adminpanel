@@ -251,3 +251,42 @@ nav#sidebar.setPositionRelative {
 // .mat-tab-list{padding-left: 169px !important;}
 // .mat-tab-label-content:hover{color:#8b7441;}
 // .mat-ink-bar{background-color: #9e9e9e !important; color:#8b7441;}
+
+.page--title {
+  font: normal normal 600 20px/24px "Montserrat" !important;
+}
+.outline--button {
+  font: normal normal 500 16px/19px "Montserrat" !important;
+  height: 48px !important;
+  border: 2px solid #988149 !important;
+  border-radius: 6px !important;
+  color: #988149 !important;
+}
+.outline--export--button {
+  font: normal normal 500 16px/19px "Montserrat" !important;
+  height: 40px !important;
+  border: 0.5px solid #988149 !important;
+  border-radius: 6px !important;
+  color: #988149 !important;
+}
+.primary--button {
+  font: normal normal 500 16px/19px "Montserrat" !important;
+  height: 48px !important;
+  background: #988149 0% 0% no-repeat padding-box !important;
+  border-radius: 6px !important;
+  color: #ffffff !important;
+}
+.danger--button {
+  font: normal normal 500 16px/19px "Montserrat" !important;
+  height: 48px !important;
+  background: red 0% 0% no-repeat padding-box !important;
+  border-radius: 6px !important;
+  color: #ffffff !important;
+}
+.secondary--button {
+  font: normal normal 500 16px/19px "Montserrat" !important;
+  height: 48px !important;
+  background: grey 0% 0% no-repeat padding-box !important;
+  border-radius: 6px !important;
+  color: #ffffff !important;
+}
