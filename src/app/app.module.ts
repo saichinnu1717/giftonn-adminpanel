@@ -68,6 +68,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { VendorTaxesComponent } from './vendor-taxes/vendor-taxes.component';
 import { VendorActionsComponent } from './vendor-actions/vendor-actions.component';
 import { ViewPartnerComponent } from './view-partner/view-partner.component';
+import { ViewPromotionDetailsComponent } from './view-promotion-details/view-promotion-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -128,6 +129,7 @@ import { ViewPartnerComponent } from './view-partner/view-partner.component';
     VendorTaxesComponent,
     VendorActionsComponent,
     ViewPartnerComponent,
+    ViewPromotionDetailsComponent,
   ],
   imports: [
     BrowserModule,

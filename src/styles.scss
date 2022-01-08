@@ -290,3 +290,17 @@ nav#sidebar.setPositionRelative {
   border-radius: 6px !important;
   color: #ffffff !important;
 }
+.table-striped > tbody > tr:nth-child(2n + 1) > td,
+.table-striped > tbody > tr:nth-child(2n + 1) > th {
+  background-color: #f4f6f9 !important;
+}
+.table thead th {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+.table tbody tr {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
