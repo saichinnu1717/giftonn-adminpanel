@@ -15,6 +15,10 @@ export class FilterComponent implements OnInit {
   partnerForm: FormGroup;
   promotionForm: FormGroup;
   productLaunchForm: FormGroup;
+  orderForm: FormGroup;
+  couponsForm: FormGroup;
+
+
   constructor(
     public dialogRef: MatDialogRef<FilterComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -78,6 +82,22 @@ export class FilterComponent implements OnInit {
       time: [""],
       status: [""],
     });
+    this.orderForm = this.fb.group({
+      storeId: [""],
+      category: [""],
+      subCategory: [""],
+      status: [""],
+    });
+    this.couponsForm = this.fb.group({
+      storeName: [""],
+      couponType: [""],
+      category: [""],
+      subCategory: [""],
+      startDate: [""],
+      endDate: [""],
+      store: [""],
+
+    });
   }
   get plf() {
     return this.productLaunchForm.controls;
@@ -97,6 +117,9 @@ export class FilterComponent implements OnInit {
   get mpf() {
     return this.productForm.controls;
   }
+  get orf() {
+    return this.orderForm.controls
+  }
 
   submit() {
     console.log(this.userForm.value);
@@ -114,10 +137,11 @@ export class FilterComponent implements OnInit {
     this.partnerForm.reset();
     this.promotionForm.reset();
     this.productLaunchForm.reset();
+    this.orderForm.reset();
   }
   close() {
     this.dialogRef.close();
     this.reset();
   }
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

@@ -68,9 +68,9 @@ export class MarketingComponent implements OnInit {
     },
   ];
   productLaunchSelected: boolean;
-  constructor(private router: Router, public dialog: MatDialog) {}
+  constructor(private router: Router, public dialog: MatDialog) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   myTabSelectedTabChange(event) {
     console.log(event);
     if (event.index === 1) {
@@ -86,6 +86,7 @@ export class MarketingComponent implements OnInit {
       data: { filterType: type },
     });
   }
+
   addProductLaunch() {
     this.router.navigate(["marketing/add-product-launch"]);
   }
@@ -102,30 +103,30 @@ export class MarketingComponent implements OnInit {
       data: promotion,
     });
   }
-  activePromotion(promotion) {}
-  inactivePromotion(promotion) {}
+  activePromotion(promotion) { }
+  inactivePromotion(promotion) { }
   approvePromotion(promotion) {
     const dialogRef = this.dialog.open(ApprovedModelComponent, {
       width: "30%",
       data: "promotion",
     });
   }
-  holdPromotion(promotion) {}
+  holdPromotion(promotion) { }
   denyProductLaunch(productLaunch) {
     const dialogRef = this.dialog.open(VendorActionsComponent, {
       width: "50%",
       data: { name: "Denay", type: "productLaunch", data: productLaunch },
     });
   }
-  activeProductLaunch(productLaunch) {}
-  inactiveProductLaunch(productLaunch) {}
+  activeProductLaunch(productLaunch) { }
+  inactiveProductLaunch(productLaunch) { }
   approveProductLaunch(productLaunch) {
     const dialogRef = this.dialog.open(ApprovedModelComponent, {
       width: "30%",
       data: "productLauncher",
     });
   }
-  holdProductLaunch(productLaunch) {}
+  holdProductLaunch(productLaunch) { }
   action(value) {
     console.log(value);
     if (value == "deny") {

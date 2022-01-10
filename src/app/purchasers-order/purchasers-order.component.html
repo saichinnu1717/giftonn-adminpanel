@@ -328,7 +328,7 @@
                             <th>Amount</th>
                             <th>Category</th>
                             <th>Sub Category</th>
-                            <th>%</th>
+                            <th>Discount</th>
                             <th>Start Date</th>
                             <th>End Date</th>
                             <th>Status</th>
@@ -336,7 +336,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- <tr *ngFor="let coupons of coupons">
+                        <tr *ngFor="let coupons of coupons">
                             <td>{{ coupons.code }}</td>
                             <td>{{ coupons.storeid }}</td>
                             <td>{{ coupons.storeName }}</td>
@@ -344,12 +344,41 @@
                             <td>{{ coupons.amount }}</td>
                             <td>{{ coupons.category }}</td>
                             <td>{{ coupons.subCategort }}</td>
-                            <td>{{ coupons.% }}</td>
+                            <td>{{ coupons.discount }}</td>
                             <td>{{ coupons.startDate }}</td>
                             <td>{{ coupons.endDte }}</td>
-                            <td>{{ coupons.status }}</td>
-                            <td>{{ coupons.action }}</td>
-                        </tr> -->
+                            <td>
+                                <div [ngClass]="
+                                            coupons.status.toUpperCase() == 'APPROVED'
+                                              ? 'text-success'
+                                              : coupons.status.toUpperCase() == 'PENDING'
+                                              ? 'text-warning'
+                                              : 'text-danger'
+                                          ">
+                                    <span> {{coupons.status }} </span>
+                                </div>
+                            </td>
+                            <td>
+                                <button mat-button
+                                        [matMenuTriggerFor]="menu"
+                                        mat-flat-button
+                                        color="warn">
+                                    Options
+                                    <mat-icon>arrow_drop_down</mat-icon>
+                                </button>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item
+                                            (click)="denyVendor(vendor)">
+                                        Approve
+                                    </button>
+                                    <button mat-menu-item
+                                            (click)="freezeVendor(vendor)">
+                                        Freeze
+                                    </button>
+
+                                </mat-menu>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
