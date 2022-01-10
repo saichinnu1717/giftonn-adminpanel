@@ -50,6 +50,11 @@ const routes: Routes = [
     loadChildren: () =>
       import("./user-pages/user-pages.module").then((m) => m.UserPagesModule),
   },
+  {
+    path: "marketing",
+    loadChildren: () =>
+      import("./marketing/marketing.module").then((m) => m.MarketingModule),
+  },
   { path: "dashboard", component: DashboardComponent },
   { path: "user", component: UsersComponent },
   { path: "vendor", component: VendorComponent },
@@ -62,7 +67,7 @@ const routes: Routes = [
   { path: "add-successful", component: SuccessfulModelComponent },
   { path: "delete-successful", component: DeleteModelComponent },
   { path: "add-Partners", component: AddPartnersComponent },
-  { path: "marketing", component: MarketingComponent },
+  // { path: "marketing", component: MarketingComponent },
   { path: "analytics", component: AnalyticsComponent },
   { path: "venderOrder", component: VenderOrderComponent },
   { path: "loyalty", component: LoyailtyComponent },
@@ -76,7 +81,7 @@ const routes: Routes = [
   { path: "ratingForCustomer", component: RatingForCustomerComponent },
   { path: "add-offers", component: AddOffersComponent },
   { path: "add-loyalty", component: AddLoyaltyComponent },
-  { path: "add-product-launch", component: AddProductLaunchComponent },
+  // { path: "add-product-launch", component: AddProductLaunchComponent },
   { path: "deny-product", component: DenyProductComponent },
   { path: "reward-categories", component: RewardCategoriesComponent },
   { path: "add-language", component: AddLanguageComponent },

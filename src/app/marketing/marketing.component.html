@@ -14,16 +14,16 @@
         <mat-icon>filter_list</mat-icon>
       </button>
     </div>
-    <!-- <div>
+    <div *ngIf="productLaunchSelected">
       <button
         mat-stroked-button
         color="accent"
         class="primary--button"
-        (click)="addPartner()"
+        (click)="addProductLaunch()"
       >
         Add Product Launch
       </button>
-    </div> -->
+    </div>
   </div>
 </div>
 <div class="ml-4 shadow-lg bg-white rounded">
@@ -78,7 +78,7 @@
       </mat-form-field>
     </div>
   </div>
-  <mat-tab-group>
+  <mat-tab-group (selectedTabChange)="myTabSelectedTabChange($event)">
     <mat-tab
       class="text-right tab_view"
       label="Promotion"

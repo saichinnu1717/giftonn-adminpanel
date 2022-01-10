@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
+import { Router } from "@angular/router";
 import { ApprovedModelComponent } from "../approved-model/approved-model.component";
 import { DenyProductComponent } from "../deny-product/deny-product.component";
 import { DenyPromotionComponent } from "../deny-promotion/deny-promotion.component";
@@ -66,14 +67,27 @@ export class MarketingComponent implements OnInit {
       status: "Approved",
     },
   ];
-  constructor(public dialog: MatDialog) {}
+  productLaunchSelected: boolean;
+  constructor(private router: Router, public dialog: MatDialog) {}
 
   ngOnInit(): void {}
+  myTabSelectedTabChange(event) {
+    console.log(event);
+    if (event.index === 1) {
+      this.productLaunchSelected = !this.productLaunchSelected;
+    } else {
+      this.productLaunchSelected = !this.productLaunchSelected;
+    }
+  }
   openFilter() {
+    let type = this.productLaunchSelected ? "productLaunch" : "promotion";
     const dialogRef = this.dialog.open(FilterComponent, {
       width: "50%",
-      data: { filterType: "promotion" },
+      data: { filterType: type },
     });
+  }
+  addProductLaunch() {
+    this.router.navigate(["marketing/add-product-launch"]);
   }
   denyPromotion(promotion) {
     const dialogRef = this.dialog.open(VendorActionsComponent, {

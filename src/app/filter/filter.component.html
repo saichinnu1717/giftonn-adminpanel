@@ -546,22 +546,147 @@
         <div class="col-sm-12">
           <p class="form-lable">Status</p>
           <mat-radio-group formControlName="status">
-            <mat-radio-button value="pending" class="pr-5 mr-5"
+            <mat-radio-button value="pending" class="pr-5 mr-5 radio-btn"
               >Pending</mat-radio-button
             >
-            <mat-radio-button value="approved" class="pr-5 mr-5"
+            <mat-radio-button value="approved" class="pr-5 mr-5 radio-btn"
               >Approved</mat-radio-button
             >
-            <mat-radio-button value="active" class="pr-5 mr-5"
+            <mat-radio-button value="active" class="pr-5 mr-5 radio-btn"
               >Active</mat-radio-button
             >
-            <mat-radio-button value="inactive" class="pr-5 mr-5"
+            <mat-radio-button value="inactive" class="pr-5 mr-5 radio-btn"
               >In-Active</mat-radio-button
             >
-            <mat-radio-button value="deny" class="pr-5 mr-5"
+            <mat-radio-button value="deny" class="pr-5 mr-5 radio-btn"
               >Deny</mat-radio-button
             >
-            <mat-radio-button value="hold" class="pr-5 mr-5"
+            <mat-radio-button value="hold" class="pr-5 mr-5 radio-btn"
+              >Hold</mat-radio-button
+            >
+          </mat-radio-group>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-around pt-4">
+        <div>
+          <button
+            type="button"
+            mat-button
+            class="outline--button"
+            (click)="reset()"
+          >
+            <span class="px-4"> Reset </span>
+          </button>
+        </div>
+        <div>
+          <button type="button" mat-button class="primary--button">
+            <span class="px-4">Apply</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="data.filterType == 'productLaunch'">
+    <form
+      [formGroup]="productLaunchForm"
+      (ngSubmit)="submit()"
+      class="m-5 pl-5"
+    >
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <p class="m-0 form-lable">Promo ID</p>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-select formControlName="promoId" placeholder="Select Promo ID">
+              <mat-option value="hyderabad"> 1234 </mat-option>
+              <mat-option value="banglore"> 124AD </mat-option>
+              <mat-option value="chenni"> 123 </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <p class="m-0 form-lable">Store Id</p>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-select formControlName="storeId" placeholder="Select Store Id">
+              <mat-option value="hyderabad"> Joyalukkas </mat-option>
+              <mat-option value="banglore"> Malabar Gold </mat-option>
+              <mat-option value="chenni"> Kalyan </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <p class="m-0 form-lable">Category</p>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-select
+              formControlName="category"
+              placeholder="Select Category"
+            >
+              <mat-option value="hyderabad"> hyderabad </mat-option>
+              <mat-option value="banglore"> banglore </mat-option>
+              <mat-option value="chenni"> chenni </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <p class="m-0 form-lable">Sub Category</p>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-select
+              formControlName="subCategory"
+              placeholder="Select Sub Category"
+            >
+              <mat-option value="hyderabad"> 1 </mat-option>
+              <mat-option value="banglore"> 2 </mat-option>
+              <mat-option value="chenni"> 3 </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <p class="m-0 form-lable">Launch Date</p>
+          <mat-form-field appearance="fill" class="full-width">
+            <input
+              matInput
+              [matDatepicker]="picker"
+              formControlName="launchDate"
+              placeholder="Enter Date"
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <p class="m-0 form-lable">Time</p>
+          <mat-form-field appearance="fill" class="full-width">
+            <input
+              matInput
+              placeholder="Placeholder"
+              formControlName="time"
+              placeholder="Enter Time"
+            />
+            <mat-icon matSuffix>schedule</mat-icon>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12">
+          <p class="form-lable">Status</p>
+          <mat-radio-group formControlName="status">
+            <mat-radio-button value="pending" class="pr-5 mr-5 radio-btn"
+              >Pending</mat-radio-button
+            >
+            <mat-radio-button value="approved" class="pr-5 mr-5 radio-btn"
+              >Approved</mat-radio-button
+            >
+            <mat-radio-button value="active" class="pr-5 mr-5 radio-btn"
+              >Active</mat-radio-button
+            >
+            <mat-radio-button value="inactive" class="pr-5 mr-5 radio-btn"
+              >In-Active</mat-radio-button
+            >
+            <mat-radio-button value="deny" class="pr-5 mr-5 radio-btn"
+              >Deny</mat-radio-button
+            >
+            <mat-radio-button value="hold" class="pr-5 mr-5 radio-btn"
               >Hold</mat-radio-button
             >
           </mat-radio-group>

@@ -14,6 +14,7 @@ export class FilterComponent implements OnInit {
   customerForm: FormGroup;
   partnerForm: FormGroup;
   promotionForm: FormGroup;
+  productLaunchForm: FormGroup;
   constructor(
     public dialogRef: MatDialogRef<FilterComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -67,8 +68,20 @@ export class FilterComponent implements OnInit {
       endDate: [""],
       status: [""],
     });
+    this.productLaunchForm = this.fb.group({
+      promoId: [""],
+      storeId: [""],
+      category: [""],
+      subCategory: [""],
+      country: [""],
+      launchDate: [""],
+      time: [""],
+      status: [""],
+    });
   }
-
+  get plf() {
+    return this.productLaunchForm.controls;
+  }
   get uf() {
     return this.userForm.controls;
   }
@@ -100,6 +113,7 @@ export class FilterComponent implements OnInit {
     this.customerForm.reset();
     this.partnerForm.reset();
     this.promotionForm.reset();
+    this.productLaunchForm.reset();
   }
   close() {
     this.dialogRef.close();
