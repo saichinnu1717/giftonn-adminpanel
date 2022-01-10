@@ -11,12 +11,12 @@ export class VendorTaxesComponent implements OnInit {
 
   ngOnInit(): void {}
   back() {
-    this.router.navigate(["coupon"]);
+    this.router.navigate(["vendors/coupon"]);
   }
   accept() {
-    this.router.navigate(["commission"]);
+    this.router.navigate(["vendors/commission"]);
   }
   next() {
-    this.router.navigate(["commission"]);
+    this.router.navigate(["vendors/commission"]);
   }
 }

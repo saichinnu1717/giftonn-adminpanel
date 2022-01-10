@@ -2,7 +2,6 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { CustomerComponent } from "./customer/customer.component";
-import { AddVendorComponent } from "./add-vendor/add-vendor.component";
 import { SuccessfulModelComponent } from "./successful-model/successful-model.component";
 import { DeleteModelComponent } from "./delete-model/delete-model.component";
 import { AnalyticsComponent } from "./analytics/analytics.component";
@@ -23,16 +22,7 @@ import { VendorPoliciesComponent } from "./vendor-policies/vendor-policies.compo
 import { CustomerPoliciesComponent } from "./customer-policies/customer-policies.component";
 import { TermsConditionsComponent } from "./terms-conditions/terms-conditions.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
-import { VendorPoliciesViewComponent } from "./vendor-policies-view/vendor-policies-view.component";
-import { TermsConditionsViewComponent } from "./terms-conditions-view/terms-conditions-view.component";
-import { OnProductsComponent } from "./on-products/on-products.component";
-import { PickUpComponent } from "./pick-up/pick-up.component";
-import { QrRedemptionComponent } from "./qr-redemption/qr-redemption.component";
-import { CouponComponent } from "./coupon/coupon.component";
-import { PaymentIntervalsComponent } from "./payment-intervals/payment-intervals.component";
-import { CommissionsComponent } from "./commissions/commissions.component";
 import { AddESignatureComponent } from "./add-e-signature/add-e-signature.component";
-import { VendorTaxesComponent } from "./vendor-taxes/vendor-taxes.component";
 const routes: Routes = [
   { path: "", redirectTo: "/dashboard", pathMatch: "full" },
   {
@@ -75,7 +65,6 @@ const routes: Routes = [
   { path: "Payments", component: PaymentsComponent },
   { path: "offers", component: OffersComponent },
   { path: "purchasersOrder", component: PurchasersOrderComponent },
-  { path: "venderOrder", component: AddVendorComponent },
   { path: "customersSupport", component: CustomersSupportComponent },
   { path: "freezed", component: FreezedModelComponent },
   { path: "ratingForCustomer", component: RatingForCustomerComponent },
@@ -88,15 +77,6 @@ const routes: Routes = [
   { path: "customer-policies", component: CustomerPoliciesComponent },
   { path: "terms-conditions", component: TermsConditionsComponent },
   { path: "about-us", component: AboutUsComponent },
-  { path: "vendor-policies-view", component: VendorPoliciesViewComponent },
-  { path: "terms-conditions-view", component: TermsConditionsViewComponent },
-  { path: "onProduct-view", component: OnProductsComponent },
-  { path: "pick-up", component: PickUpComponent },
-  { path: "qr-redemption", component: QrRedemptionComponent },
-  { path: "vendor-taxes", component: VendorTaxesComponent },
-  { path: "commission", component: CommissionsComponent },
-  { path: "coupon", component: CouponComponent },
-  { path: "payment-interval", component: PaymentIntervalsComponent },
   { path: "add-e-signature", component: AddESignatureComponent },
   {
     path: "basic-ui",

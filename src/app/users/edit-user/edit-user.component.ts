@@ -2,8 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { MatDialog } from "@angular/material/dialog";
 import { ActivatedRoute } from "@angular/router";
-import { ConfirmedValidator } from "../add-user/confirmed.validator";
-import { SuccessfulModelComponent } from "../successful-model/successful-model.component";
+import { SuccessfulModelComponent } from "../../successful-model/successful-model.component";
 
 @Component({
   selector: "app-edit-user",

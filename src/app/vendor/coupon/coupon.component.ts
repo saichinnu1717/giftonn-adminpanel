@@ -11,12 +11,12 @@ export class CouponComponent implements OnInit {
 
   ngOnInit(): void {}
   back() {
-    this.router.navigate(["qr-redemption"]);
+    this.router.navigate(["vendors/qr-redemption"]);
   }
   accept() {
-    this.router.navigate(["vendor-taxes"]);
+    this.router.navigate(["vendors/vendor-taxes"]);
   }
   next() {
-    this.router.navigate(["vendor-taxes"]);
+    this.router.navigate(["vendors/vendor-taxes"]);
   }
 }

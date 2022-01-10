@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatDialog } from "@angular/material/dialog";
-import { SuccessfulModelComponent } from "../successful-model/successful-model.component";
+import { SuccessfulModelComponent } from "src/app/successful-model/successful-model.component";
 import { ConfirmedValidator } from "./confirmed.validator";
 @Component({
   selector: "app-add-user",

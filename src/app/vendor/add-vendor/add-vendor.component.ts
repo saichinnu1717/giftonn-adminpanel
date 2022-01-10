@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatDialog } from "@angular/material/dialog";
 import { Router } from "@angular/router";
-import { SuccessfulModelComponent } from "../successful-model/successful-model.component";
+import { SuccessfulModelComponent } from "../../successful-model/successful-model.component";
 @Component({
   selector: "app-add-vendor",
   templateUrl: "./add-vendor.component.html",
@@ -47,6 +47,6 @@ export class AddVendorComponent implements OnInit {
     console.log("this.addVendorGroup.value", this.addVendorGroup.value);
   }
   onBoarding() {
-    this.router.navigate(["vendor-policies-view"]);
+    this.router.navigate(["vendors/vendor-policies-view"]);
   }
 }
