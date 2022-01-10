@@ -48,10 +48,10 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {}
 
   addUser() {
-    this.router.navigate(["add-user"]);
+    this.router.navigate(["users/add-user"]);
   }
   editUser(user) {
-    this.router.navigate(["edit-user", user.empid]);
+    this.router.navigate(["users/edit-user", user.empid]);
   }
   download(type) {
     console.log(type);
