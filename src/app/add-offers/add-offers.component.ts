@@ -9,20 +9,10 @@ import { Router } from '@angular/router';
 })
 export class AddOffersComponent implements OnInit {
 
+
   addOffersGroup: FormGroup
-  category = "Selete Categor"
-  offerName = "Enter Offer Name"
-  description = "Enter Description"
-  date = "Enter Date"
-  storeId = ""
-  offerId = ""
-  offerCategoty = ""
-  subCategory = ""
-  SelectCountry = ""
-  SelectLocation = ""
-  Description = ""
-  StartDate = ""
-  EndDate = ""
+
+
 
 
 
@@ -32,11 +22,20 @@ export class AddOffersComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.addOffersGroup = this.fb.group({
-      "category": ['', Validators.required],
-      "offerName": ['Enter Offer Name', Validators.required],
-      "description": ['Enter Description', Validators.required],
-      "startDate": ['', Validators.required],
-      "endDate": ['', Validators.required],
+
+      category: [""],
+      offerName: [""],
+      description: [""],
+      date: [""],
+      storeId: [""],
+      offerId: [""],
+      offerCategoty: [""],
+      subCategory: [""],
+      SelectCountry: [""],
+      SelectLocation: [""],
+      Description: [""],
+      startDate: [""],
+      EndDate: [""],
     })
   }
 

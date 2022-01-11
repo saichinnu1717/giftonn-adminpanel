@@ -65,7 +65,7 @@ export class VenderOrderComponent implements OnInit {
   openFilter() {
     const dialogRef = this.dialog.open(FilterComponent, {
       width: "50%",
-      data: { filterType: "vendorordeForm" },
+      data: { filterType: "vendororder" },
     });
   }
   approveProduct(vendorordeFormr) {

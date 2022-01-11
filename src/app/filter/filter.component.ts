@@ -17,7 +17,9 @@ export class FilterComponent implements OnInit {
   productLaunchForm: FormGroup;
   orderForm: FormGroup;
   couponsForm: FormGroup;
-
+  vendororderForm: FormGroup;
+  offerForm: FormGroup;
+  loyaltyForm: FormGroup;
 
   constructor(
     public dialogRef: MatDialogRef<FilterComponent>,
@@ -98,6 +100,28 @@ export class FilterComponent implements OnInit {
       store: [""],
 
     });
+    this.vendororderForm = this.fb.group({
+      storeId: [""],
+      Date: [""],
+      customerId: [""],
+      orderId: [""],
+      discount: [""],
+      time: [""],
+    });
+    this.offerForm = this.fb.group({
+      endDate: [""],
+      startDate: [""],
+      SubCategory: [""],
+      category: [""],
+      storeId: [""],
+      location: [""],
+      country: [""],
+    });
+    this.loyaltyForm = this.fb.group({
+      endDate: [""],
+      currency: [""],
+      rewardType: [""],
+    });
   }
   get plf() {
     return this.productLaunchForm.controls;
@@ -118,7 +142,16 @@ export class FilterComponent implements OnInit {
     return this.productForm.controls;
   }
   get orf() {
-    return this.orderForm.controls
+    return this.orderForm.controls;
+  }
+  get vof() {
+    return this.vendororderForm.controls;
+  }
+  get off() {
+    return this.offerForm.controls;
+  }
+  get lf() {
+    return this.loyaltyForm.controls;
   }
 
   submit() {
@@ -138,6 +171,10 @@ export class FilterComponent implements OnInit {
     this.promotionForm.reset();
     this.productLaunchForm.reset();
     this.orderForm.reset();
+    this.vendororderForm.reset();
+    this.offerForm.reset();
+    this.loyaltyForm.reset();
+
   }
   close() {
     this.dialogRef.close();

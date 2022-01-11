@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { data } from 'jquery';
 import { ApprovedModelComponent } from '../approved-model/approved-model.component';
 import { DenyProductComponent } from '../deny-product/deny-product.component';
+import { FilterComponent } from '../filter/filter.component';
 import { FreezeRoleComponent } from '../freeze-role/freeze-role.component';
 import { RatingForCustomerComponent } from '../rating-for-customer/rating-for-customer.component';
 import { VendorActionsComponent } from '../vendor-actions/vendor-actions.component';
-
 @Component({
   selector: 'app-offers',
   templateUrl: './offers.component.html',
@@ -48,8 +49,11 @@ export class OffersComponent implements OnInit {
     { value: "approve", viewValue: "Approve" },
     { value: "rating", viewValue: "Rating" },
   ];
-  constructor(public dialog: MatDialog) { }
 
+  constructor(public dialog: MatDialog, private router: Router) { }
+  addVendor() {
+    this.router.navigate(["add-offers"]);
+  }
   ngOnInit(): void {
   }
   action(value) {
@@ -108,6 +112,12 @@ export class OffersComponent implements OnInit {
       data: { name: "Rating", type: "vendor", data: vendor },
     });
     console.log("ratingVendor : " + vendor.storeId);
+  }
+  openFilter() {
+    const dialogRef = this.dialog.open(FilterComponent, {
+      width: "50%",
+      data: { filterType: "offerForm" },
+    });
   }
 }
 
