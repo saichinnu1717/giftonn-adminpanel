@@ -20,6 +20,7 @@ export class LoyailtyComponent implements OnInit {
       width: "50%"
     });
     dialogRef.afterClosed().subscribe(result => {
+
     });
   }
 
